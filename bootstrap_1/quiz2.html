@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Quiz 2</h1>
+        <div id="timer">60:00</div> <!-- Timer che viene mostrato anche su questa pagina -->
+    </header>
+    
+    <form id="quizForm">
+        <div class="question">
+            <p>1. Qual è la capitale d'Italia?</p>
+            <label><input type="radio" name="q12" value="a"> Roma</label><br>
+            <label><input type="radio" name="q12" value="b"> Milano</label><br>
+            <label><input type="radio" name="q12" value="c"> Napoli</label><br>
+            <label><input type="radio" name="q12" value="d"> Torino</label><br>
+        </div>
+
+        <div class="question">
+            <p>2. Qual è il fiume più lungo d'Italia?</p>
+            <label><input type="radio" name="q22" value="a"> Po</label><br>
+            <label><input type="radio" name="q22" value="b"> Arno</label><br>
+            <label><input type="radio" name="q22" value="c"> Tevere</label><br>
+            <label><input type="radio" name="q22" value="d"> Adige</label><br>
+        </div>
+        
+        <br>
+        <button type="button" onclick="window.location.href='index.html'">Indietro</button>
+    </form>
+
+    <!-- Includiamo lo script per il timer -->
+    <script src="script.js"></script>
+</body>
+</html>

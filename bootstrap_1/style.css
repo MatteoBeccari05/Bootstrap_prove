@@ -6,9 +6,12 @@ body {
     padding: 0;
     display: flex;            /* Flexbox per centrare tutto il contenuto */
     flex-direction: column;   /* Disporre il contenuto in colonna */
-    justify-content: center;  /* Centra verticalmente */
-    align-items: center;      /* Centra orizzontalmente */
+    justify-content: flex-start;  /* Iniziamo da in alto */
+    align-items: flex-start;  /* Allinea il contenuto a sinistra */
     height: 100vh;            /* Altezza della finestra intera */
+    padding-left: 50px;       /* Aggiungi un margine sinistro di 50px */
+    box-sizing: border-box;   /* Considera padding e bordi per tutte le dimensioni */
+    margin-top: 60px;         /* Distanza dall'alto per evitare che il contenuto si sovrapponga all'header */
 }
 
 /* Stile per l'header */
@@ -19,9 +22,10 @@ header {
     width: 100%;              /* Assicura che l'header copra tutta la larghezza */
     box-sizing: border-box;   /* Considera il padding nel calcolo delle dimensioni */
     text-align: left;         /* Allinea il testo dell'header a sinistra */
-    position: absolute;       /* Fissa l'header in alto */
+    position: fixed;          /* Fissa l'header in alto */
     top: 0;                   /* Posiziona l'header in cima alla pagina */
     left: 0;                  /* Posiziona l'header a sinistra */
+    z-index: 1000;            /* Assicura che l'header sia sempre sopra altri elementi */
 }
 
 /* Impostazioni per il titolo */
@@ -41,6 +45,14 @@ h1 {
     border-radius: 5px;
     font-size: 1.5em;
     font-weight: bold;
+    z-index: 1001;  /* Assicurati che il timer sia visibile sopra gli altri contenuti */
+}
+
+/* Stile per le domande */
+.question {
+    text-align: left; /* Allinea il testo a sinistra */
+    margin: 10px;
+    width: 100%; /* Assicura che la domanda occupi tutta la larghezza disponibile */
 }
 
 /* Stile per i bottoni */
@@ -70,8 +82,42 @@ button:hover {
     background-color: #4546a0;
 }
 
-/* Centrare il contenuto delle domande */
-.question {
-    text-align: center; /* Centra il testo all'interno delle domande */
-    margin: 20px;
+/* Aggiungere uno spazio sopra il contenuto per evitare sovrapposizione con l'header */
+#quizForm {
+    margin-top: 80px; /* Aggiungi spazio extra per compensare l'header fisso */
+    width: 100%;  /* Permette alle domande di occupare l'intera larghezza */
+}
+
+/* Stile responsivo per dispositivi mobili */
+@media (max-width: 768px) {
+    body {
+        padding-left: 20px; /* Riduce il padding per schermi più piccoli */
+        padding-right: 20px; /* Aggiungi un po' di spazio a destra per evitare che il testo tocchi i bordi */
+    }
+
+    #timer {
+        font-size: 1.2em; /* Riduce la dimensione del timer su schermi più piccoli */
+    }
+
+    button {
+        font-size: 1em; /* Riduce la dimensione del bottone per schermi più piccoli */
+    }
+
+    .question {
+        margin: 10px 0; /* Riduce la distanza tra le domande */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;  /* Riduce la dimensione del titolo su schermi molto piccoli */
+    }
+
+    #timer {
+        font-size: 1em; /* Ancora più piccolo il timer su schermi piccoli */
+    }
+
+    button {
+        font-size: 0.9em; /* Riduce ulteriormente la dimensione del bottone */
+    }
 }

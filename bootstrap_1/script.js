@@ -58,8 +58,14 @@ window.onload = function() {
     const savedAnswers = {
         q11: localStorage.getItem('q11') || '',
         q21: localStorage.getItem('q21') || '',
+        q31: localStorage.getItem('q31') || '',
+        q41: localStorage.getItem('q41') || '',
+        q51: localStorage.getItem('q51') || '',
         q12: localStorage.getItem('q12') || '',
-        q22: localStorage.getItem('q22') || ''
+        q22: localStorage.getItem('q22') || '',
+        q32: localStorage.getItem('q32') || '',
+        q42: localStorage.getItem('q42') || '',
+        q52: localStorage.getItem('q52') || '',
     };
 
     // Se ci sono risposte salvate, le seleziona

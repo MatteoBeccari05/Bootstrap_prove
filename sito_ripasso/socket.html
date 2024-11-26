@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prova</title>
+    <title>Socket</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -22,13 +22,13 @@
                     <a class="nav-link" aria-current="page" href="index.html">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" href="#">Le socket</a>
+                    <a class="nav-link active" href="socket.html">Le socket</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Server / Client</a>
+                    <a class="nav-link" href="server_client.html">Server / Client</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Glossario</a>
+                    <a class="nav-link" href="glossario.html">Glossario</a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -53,8 +53,66 @@
     <!-- Contenuto della pagina -->
     <div class="content">
         <div class="container mt-5">
-            <h1>Benvenuto nella pagina delle socket!</h1>
-            
+            <h2>Che cosa sono le socket?</h2>
+            <p>
+                Una <b>socket</b> è un'interfaccia software che consente la comunicazione tra due entità in una rete. 
+                Si tratta di un meccanismo fondamentale per le applicazioni di rete come browser web, email, chat e streaming. 
+                In sostanza, una socket funge da "porta virtuale" che permette ai programmi di inviare e ricevere dati.
+            </p>
+
+            <h3>Come funziona una socket?</h3>
+            <p>Le socket operano seguendo un modello client-server:</p>
+            <ul>
+                <li>
+                    <b>Server:</b> Il server crea una socket, la associa a un indirizzo IP e una porta, e si mette in ascolto delle richieste in arrivo. 
+                    Quando un client si connette, il server accetta la connessione e inizia a scambiare dati.
+                </li>
+                <li>
+                    <b>Client:</b> Il client crea una socket, specifica l'indirizzo del server e la porta, e avvia la connessione. 
+                    Una volta stabilita, i dati possono essere scambiati.
+                </li>
+            </ul>
+
+            <h3>Protocolli comuni per le socket</h3>
+            <p>Le socket utilizzano protocolli standard per il trasferimento dei dati:</p>
+            <ul>
+                <li><b>TCP (Transmission Control Protocol):</b> Utilizzato per comunicazioni affidabili e ordinate. È ideale per applicazioni web, email e trasferimento file.</li>
+                <li><b>UDP (User Datagram Protocol):</b> Utilizzato per comunicazioni veloci ma non garantite. È usato in applicazioni come streaming e giochi online.</li>
+            </ul>
+
+            <h3>Architettura delle socket</h3>
+            <p>Il processo di comunicazione tramite socket si basa su:</p>
+            <ol>
+                <li><b>Creazione della socket:</b> Il server e il client creano una socket.</li>
+                <li><b>Collegamento:</b> La socket del client si connette alla socket del server utilizzando un indirizzo IP e una porta.</li>
+                <li><b>Scambio di dati:</b> Una volta stabilita la connessione, i dati possono essere scambiati.</li>
+                <li><b>Chiusura della connessione:</b> La comunicazione termina quando una delle due parti chiude la socket.</li>
+            </ol>
+
+            <img src="images/socket_tcpip.png" class="img-fluid mb-4" alt="Diagramma Client-Server Socket">
+            <p class="text-center">Schema di una comunicazione Client-Server tramite socket</p>
+
+            <h3>Esempi di applicazioni reali</h3>
+            <p>Le socket sono fondamentali per diverse applicazioni quotidiane, tra cui:</p>
+            <ul>
+                <li><b>Applicazioni Web:</b> I browser utilizzano socket per connettersi ai server web.</li>
+                <li><b>Chat:</b> Le applicazioni di messaggistica come WhatsApp e Telegram usano socket per trasferire messaggi.</li>
+                <li><b>Streaming:</b> Servizi come Netflix e Spotify utilizzano socket per lo streaming di video e audio.</li>
+                <li><b>Giochi Online:</b> Le socket gestiscono la comunicazione tra i giocatori e il server del gioco.</li>
+            </ul>
+
+            <h3>Socket e la Pila TCP/IP</h3>
+            <p>
+                Le socket lavorano principalmente al livello di trasporto nella pila TCP/IP. Questo livello gestisce il trasferimento dei dati tra dispositivi, fornendo protocolli come TCP e UDP per garantire una comunicazione affidabile o veloce.
+            </p>
+            <img src="images/tcp_ip.jpg" class="img-fluid mb-4" alt="Schema TCP/IP con socket">
+            <p class="text-center">Schema della pila TCP/IP</p>
+
+            <h3>Vantaggi e Svantaggi delle socket</h3>
+            <ul>
+                <li><b>Vantaggi:</b> Flessibilità, efficienza nella comunicazione e supporto per vari protocolli.</li>
+                <li><b>Svantaggi:</b> Complessità nella gestione degli errori e nella configurazione di connessioni sicure.</li>
+            </ul>
         </div>
     </div>
 

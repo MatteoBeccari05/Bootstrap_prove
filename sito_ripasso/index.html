@@ -9,70 +9,96 @@
 </head>
 <body>
 
-    <nav data-bs-theme="dark">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">WBSCHOOL</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+  <nav data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="WBSCHOOL Logo" style="height: 40px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="socket.html">Le socket</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="server_client.html">Server / Client</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="glossario.html">Glossario</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      La Pila ISO/OSI
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Livello 1</a></li>
-                      <li><a class="dropdown-item" href="#">Livello 2</a></li>
-                      <li><a class="dropdown-item" href="#">Livello 3</a></li>
-                      <li><a class="dropdown-item" href="#">Livello 4</a></li>
-                      <li><a class="dropdown-item" href="#">Livello 5</a></li>
-                      <li><a class="dropdown-item" href="#">Livello 6</a></li>
-                      <li><a class="dropdown-item" href="#">Livello 7</a></li>
-                    </ul>
-                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="socket.html">Le socket</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="server_client.html">Server / Client</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pila_iso_osi.html">La Pila ISO/OSI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="glossario.html">Glossario</a>
+                    </li>
                 </ul>
-              </div>
             </div>
-          </nav>
-      </nav>
+        </div>
+    </nav>
+</nav>
+
+
 
     <!-- Contenuto della pagina -->
     <div class="content">
         <div class="container mt-5">
-            <h1>Benvenuto in WBECKSCHOOL!</h1>
-            <p>Questo sito offre una panoramica sui principali concetti della comunicazione di rete, come i socket, la pila ISO/OSI, e l'architettura client-server.</p>
-
-            <h2>Cos'è un Socket?</h2>
-            <p>Un <strong>socket</strong> è un meccanismo di comunicazione che permette a due applicazioni, che possono essere eseguite su macchine diverse, di scambiarsi dati attraverso una rete. I socket forniscono un'interfaccia per le applicazioni per inviare e ricevere informazioni tramite il protocollo TCP/IP. Un'applicazione può aprire un socket, inviare dati attraverso di esso e ricevere risposte. I socket sono fondamentali per la creazione di applicazioni di rete come il web, le chat, e molti altri servizi distribuiti.</p>
-
-            <h2>Il contenuto del sito</h2>
-            <p>Il sito esplora i concetti fondamentali della <strong>comunicazione di rete</strong> e dell'architettura distribuita. Ecco i principali argomenti trattati:</p>
+            <h1 class="text-center">Benvenuto in WBECKSCHOOL!</h1>
+            <p class="text-center">L'informatica per tutti!</p>
+            
+            <h2>Cosa tratteremo in questo sito?</h2>
+            
             <ul>
-                <li><strong>Socket</strong>: Approfondisce il funzionamento e l'uso dei socket nelle comunicazioni tra applicazioni, descrivendo come vengono stabilite e gestite le connessioni di rete.</li>
+                <li><strong>Socket</strong>: approfondiremo il funzionamento e l'uso dei socket nelle comunicazioni tra applicazioni, descrivendo come vengono stabilite e gestite le connessioni di rete.</li>
                 <li><strong>Pila ISO/OSI</strong>: La <strong>pila ISO/OSI</strong> è un modello concettuale a 7 livelli che descrive come i dati viaggiano da un'applicazione su un computer a un'applicazione su un altro, passando attraverso vari livelli di protocolli di rete. Ogni livello ha una funzione specifica nella gestione dei dati, dalla trasmissione fisica alla presentazione delle informazioni all'utente.</li>
                 <li><strong>Architettura Server-Client</strong>: In un'architettura <strong>server-client</strong>, un computer (il <strong>server</strong>) offre risorse o servizi, mentre un altro computer (il <strong>client</strong>) li richiede. Questo modello è alla base di molte applicazioni moderne, dove i client fanno richieste di dati al server, il quale risponde con le informazioni richieste.</li>
+                <li><strong>Glossario</strong>: il sito contiene un <a href="glossario.html">glossario</a> delle parole usate con i rispettivi significati.</li>
             </ul>
-            <p>Il sito mira a fornire una comprensione approfondita di come funzionano le comunicazioni di rete e come i vari concetti si interconnettono per creare applicazioni moderne e scalabili.</p>
+
+            <div class="container mt-4">
+              <div class="row">
+                  <!-- Card -->
+                  <div class="col-md-6 col-lg-4">
+                      <div class="card" style="width: 18rem; height: 27rem;">
+                          <img src="images/socket_card.png" class="card-img-top" alt="socket">
+                          <div class="card-body">
+                              <h5 class="card-title">Le socket</h5>
+                              <p class="card-text">Scopri cosa sono le socket nel mondo dell'informatica!</p>
+                              <a href="socket.html" class="btn btn-primary">Vai all'argomento</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                      <div class="card" style="width: 18rem; height: 27rem;">
+                          <img src="images/iso_osi_card.png" class="card-img-top" alt="iso osi">
+                          <div class="card-body">
+                              <h5 class="card-title">La pila ISO/OSI</h5>
+                              <p class="card-text">Scopri tutti i livelli della pila ISO/OSI!</p>
+                              <a href="pila_iso_osi.html" class="btn btn-primary">Vai all'argomento</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                      <div class="card" style="width: 18rem; height: 27rem;">
+                          <img src="images/srv_cl.png" class="card-img-top" alt="client - server">
+                          <div class="card-body">
+                              <h5 class="card-title">Server - Client</h5>
+                              <p class="card-text">Scopri cosa si cela dietro l'architettura server-client!</p>
+                              <a href="server_client.html" class="btn btn-primary">Vai all'argomento</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
         </div>
     </div>
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 WBECKSCHOOL</p> 
+        <p>&copy; 2024 WBECKSCHOOL <img src="images/logo.png" alt="WBSCHOOL Logo" style="height: 40px;"></p> 
         <p>Matteo Beccari 5F</p>
     </footer>
 

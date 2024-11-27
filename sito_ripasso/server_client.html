@@ -10,9 +10,11 @@
 <body>
 
     <nav data-bs-theme="dark">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">WBSCHOOL</a>
+              <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="WBSCHOOL Logo" style="height: 40px;">
+            </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -28,22 +30,12 @@
                     <a class="nav-link active" href="server_client.html">Server / Client</a>
                   </li>
                   <li class="nav-item">
+                    <a class="nav-link " href="pila_iso_osi.html">La Pila ISO/OSI</a>
+                </li>
+                  <li class="nav-item">
                     <a class="nav-link" href="glossario.html">Glossario</a>
                   </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      La Pila ISO/OSI
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Livello 1</a></li>
-                      <li><a class="dropdown-item" href="#">Livello 2</a></li>
-                      <li><a class="dropdown-item" href="#">Livello 3</a></li>
-                      <li><a class="dropdown-item" href="#">Livello 4</a></li>
-                      <li><a class="dropdown-item" href="#">Livello 5</a></li>
-                      <li><a class="dropdown-item" href="#">Livello 6</a></li>
-                      <li><a class="dropdown-item" href="#">Livello 7</a></li>
-                    </ul>
-                  </li>
+                  
                 </ul>
               </div>
             </div>
@@ -53,16 +45,19 @@
     <!-- Contenuto della pagina -->
     <div class="content">
         <div class="container mt-5">
-            <h1>Architettura Server-Client</h1>
+            <h1 class="text-center">Architettura Server-Client</h1>
             <p >
-                In informatica, l'architettura server-client è un modello di comunicazione in cui un client richiede risorse o servizi da un server.
-                Questo modello è alla base di molte applicazioni moderne, inclusi i siti web, le applicazioni di messaggistica e i sistemi cloud.
+              L'architettura client-server è un modello di progettazione di sistemi informatici in cui le risorse e i servizi sono distribuiti tra due entità principali: il client e il server. Questo modello è alla base di molte applicazioni moderne, inclusi i servizi web, le reti aziendali e le applicazioni mobili.
+              L'architettura client-server è un modello fondamentale per la costruzione di applicazioni distribuite, dove la separazione dei ruoli tra client e server consente un'elaborazione più efficiente, centralizzata e sicura. Questo modello è molto usato in vari settori, tra cui il web, le applicazioni aziendali, 
+              i giochi online e i sistemi di gestione dei dati.
             </p>
 
             <h2>Che cos'è un Server?</h2>
             <p>
-                Un <b>server</b> è un dispositivo o software che fornisce <a href="https://it.wikipedia.org/wiki/Risorsa_di_sistema#:~:text=Una%20risorsa%20%C3%A8%20un%20elemento,che%20essi%20ne%20possano%20usufruire." target="_blank"><b>risorse</b></a>, dati o servizi a uno o più client su una rete.
+                Un <b>server</b> è un dispositivo o software che fornisce <a href="https://it.wikipedia.org/wiki/Risorsa_di_sistema#:~:text=Una%20risorsa%20%C3%A8%20un%20elemento,che%20essi%20ne%20possano%20usufruire." target="_blank">risorse</a>, dati o servizi a uno o più client su una rete.
                 Esempi di server includono server web (che ospitano siti web), server di posta elettronica e server di <a href="https://it.wikipedia.org/wiki/Base_di_dati" target="_blank"> database. </a>
+                I server sono progettati per gestire e rispondere a richieste provenienti da uno o più client, utilizzando specifici protocolli di comunicazione. Esistono diversi tipi di server a seconda delle funzionalità che offrono, come i web server, che gestiscono le richieste di pagine web, 
+                o i file server, che archivia e fornisce accesso a file. In generale, i server sono caratterizzati da una maggiore potenza di elaborazione e capacità di gestione simultanea di molteplici richieste rispetto ai client, e sono solitamente sempre attivi e connessi alla rete per garantire la disponibilità dei servizi.
             </p>
             
 
@@ -70,6 +65,9 @@
             <p>
                 Un <b>client</b> è un dispositivo o un'applicazione che invia richieste al server per accedere a risorse o servizi.
                 Ad esempio, un browser web è un client che richiede pagine web ai server.
+                Il client invia richieste al server, che elabora e restituisce i dati o i servizi richiesti. I client possono essere dispositivi fisici, 
+                come computer, smartphone o tablet, o applicazioni software, come browser web o client di posta elettronica. In un'architettura client-server, 
+                il client è responsabile dell'invio delle richieste e dell'interazione diretta con l'utente, mentre il server gestisce l'elaborazione e la fornitura delle risorse richieste.
             </p>
 
             <h2>Come funziona l'architettura Server-Client?</h2>
@@ -109,9 +107,9 @@
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 WBECKSCHOOL</p> 
-        <p>Matteo Beccari 5F</p>
-    </footer>
+      <p>&copy; 2024 WBECKSCHOOL <img src="images/logo.png" alt="WBSCHOOL Logo" style="height: 40px;"></p> 
+      <p>Matteo Beccari 5F</p>
+  </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 

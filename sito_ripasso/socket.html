@@ -10,9 +10,11 @@
 <body>
 
     <nav data-bs-theme="dark">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">WBSCHOOL</a>
+              <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="WBSCHOOL Logo" style="height: 40px;">
+            </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -28,22 +30,12 @@
                     <a class="nav-link" href="server_client.html">Server / Client</a>
                   </li>
                   <li class="nav-item">
+                    <a class="nav-link " href="glossario.html">La Pila ISO/OSI</a>
+                </li>
+                  <li class="nav-item">
                     <a class="nav-link" href="glossario.html">Glossario</a>
                   </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      La Pila ISO/OSI
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Livello 1</a></li>
-                      <li><a class="dropdown-item" href="#">Livello 2</a></li>
-                      <li><a class="dropdown-item" href="#">Livello 3</a></li>
-                      <li><a class="dropdown-item" href="#">Livello 4</a></li>
-                      <li><a class="dropdown-item" href="#">Livello 5</a></li>
-                      <li><a class="dropdown-item" href="#">Livello 6</a></li>
-                      <li><a class="dropdown-item" href="#">Livello 7</a></li>
-                    </ul>
-                  </li>
+                  
                 </ul>
               </div>
             </div>
@@ -64,11 +56,11 @@
             <p>Le socket operano seguendo un modello client-server:</p>
             <ul>
                 <li>
-                    <b>Server:</b> Il server crea una socket, la associa a un indirizzo IP e una porta, e si mette in ascolto delle richieste in arrivo. 
+                    <b>Server:</b> Il server crea una socket, la associa a un indirizzo IP e una <a href="https://it.wikipedia.org/wiki/Porta_(reti)" target="_blank"> porta</a>, e si mette in ascolto delle richieste in arrivo. 
                     Quando un client si connette, il server accetta la connessione e inizia a scambiare dati.
                 </li>
                 <li>
-                    <b>Client:</b> Il client crea una socket, specifica l'indirizzo del server e la porta, e avvia la connessione. 
+                    <b>Client:</b> Il client crea una socket, specifica l'indirizzo del server e la <a href="https://it.wikipedia.org/wiki/Porta_(reti)" target="_blank"> porta</a>, e avvia la connessione. 
                     Una volta stabilita, i dati possono essere scambiati.
                 </li>
             </ul>
@@ -76,8 +68,8 @@
             <h3>Protocolli comuni per le socket</h3>
             <p>Le socket utilizzano protocolli standard per il trasferimento dei dati:</p>
             <ul>
-                <li><b>TCP (Transmission Control Protocol):</b> Utilizzato per comunicazioni affidabili e ordinate. È ideale per applicazioni web, email e trasferimento file.</li>
-                <li><b>UDP (User Datagram Protocol):</b> Utilizzato per comunicazioni veloci ma non garantite. È usato in applicazioni come streaming e giochi online.</li>
+                <li><b><a href="https://it.wikipedia.org/wiki/Transmission_Control_Protocol" target="_blank">TCP (Transmission Control Protocol)</a>:</b> Utilizzato per comunicazioni affidabili e ordinate. È ideale per applicazioni web, email e trasferimento file.</li>
+                <li><b><a href="https://it.wikipedia.org/wiki/User_Datagram_Protocol" target="_blank">UDP (User Datagram Protocol)</a> :</b> Utilizzato per comunicazioni veloci ma non garantite. È usato in applicazioni come streaming e giochi online.</li>
             </ul>
 
             <h3>Architettura delle socket</h3>
@@ -103,7 +95,7 @@
 
             <h3>Socket e la Pila TCP/IP</h3>
             <p>
-                Le socket lavorano principalmente al livello di trasporto nella pila TCP/IP. Questo livello gestisce il trasferimento dei dati tra dispositivi, fornendo protocolli come TCP e UDP per garantire una comunicazione affidabile o veloce.
+                Le socket lavorano principalmente al livello di trasporto nella <a href="https://it.wikipedia.org/wiki/Suite_di_protocolli_Internet" target="_blank">pila TCP/IP</a>. Questo livello gestisce il trasferimento dei dati tra dispositivi, fornendo protocolli come TCP e UDP per garantire una comunicazione affidabile o veloce.
             </p>
             <img src="images/tcp_ip.jpg" class="img-fluid mb-4" alt="Schema TCP/IP con socket">
             <p class="text-center">Schema della pila TCP/IP</p>
@@ -118,9 +110,9 @@
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 WBECKSCHOOL</p> 
-        <p> Matteo Beccari 5F</p>
-    </footer>
+      <p>&copy; 2024 WBECKSCHOOL <img src="images/logo.png" alt="WBSCHOOL Logo" style="height: 40px;"></p> 
+      <p>Matteo Beccari 5F</p>
+  </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 

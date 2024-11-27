@@ -9,9 +9,11 @@
 </head>
 <body>
     <nav data-bs-theme="dark">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">WBSCHOOL</a>
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt="WBSCHOOL Logo" style="height: 40px;">
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -27,22 +29,13 @@
                             <a class="nav-link" href="server_client.html">Server / Client</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link " href="pila_iso_osi.html">La Pila ISO/OSI</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link active" href="glossario.html">Glossario</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                La Pila ISO/OSI
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Livello 1</a></li>
-                                <li><a class="dropdown-item" href="#">Livello 2</a></li>
-                                <li><a class="dropdown-item" href="#">Livello 3</a></li>
-                                <li><a class="dropdown-item" href="#">Livello 4</a></li>
-                                <li><a class="dropdown-item" href="#">Livello 5</a></li>
-                                <li><a class="dropdown-item" href="#">Livello 6</a></li>
-                                <li><a class="dropdown-item" href="#">Livello 7</a></li>
-                            </ul>
-                        </li>
+                       
+                        
                     </ul>
                 </div>
             </div>
@@ -159,13 +152,54 @@
                     </div>
                     
                 </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading6">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                            TCP (Transmission Control Protocol)
+                        </button>
+                    </h2>
+                    <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body">
+                            Il TCP (Transmission Control Protocol) è un protocollo di trasporto affidabile e orientato alla connessione. 
+                            È uno dei principali protocolli utilizzati per la trasmissione di dati su Internet. 
+                            TCP garantisce che i dati vengano consegnati correttamente e nell'ordine giusto tra il mittente e il 
+                            destinatario. La comunicazione in TCP avviene attraverso un processo di handshake (scambio di pacchetti 
+                            di sincronizzazione) per stabilire una connessione prima che i dati vengano effettivamente inviati. 
+                            In caso di perdita di pacchetti, TCP provvede al loro recupero attraverso meccanismi di ritrasmissione. 
+                            È utilizzato in applicazioni dove l'affidabilità è fondamentale, come la navigazione web (HTTP), 
+                            l'invio di email (SMTP) e il trasferimento di file (FTP).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading7">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                            UDP (User Datagram Protocol)
+                        </button>
+                    </h2>
+                    <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body">
+                            L'UDP (User Datagram Protocol) è un protocollo di trasporto senza connessione e non affidabile. 
+                            A differenza del TCP, UDP non garantisce la consegna dei dati, né l'ordine in cui vengono ricevuti. 
+                            Viene utilizzato per applicazioni che richiedono una trasmissione rapida dei dati, come lo streaming 
+                            video, i giochi online e la telefonia VoIP, dove la velocità di trasmissione è più importante della 
+                            completezza e dell'ordine dei dati. UDP invia i dati in pacchetti chiamati "datagrammi", 
+                            ma non stabilisce una connessione tra il mittente e il destinatario, il che lo rende più veloce ma meno 
+                            sicuro rispetto a TCP.
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
             </div>
         </div>
     </div>
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 WBECKSCHOOL</p> 
+        <p>&copy; 2024 WBECKSCHOOL <img src="images/logo.png" alt="WBSCHOOL Logo" style="height: 40px;"></p> 
         <p>Matteo Beccari 5F</p>
     </footer>
 

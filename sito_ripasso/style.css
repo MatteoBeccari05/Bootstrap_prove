@@ -14,5 +14,9 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    /* Aggiungi uno spazio sufficiente per evitare che il contenuto si sovrapponga */
+    /* Spazio sufficiente per evitare che il contenuto si sovrapponga */
+}
+
+body {
+    padding-top: 40px; /* margine superiore per evitare che il contenuto venga nascosto dalla navbar */
 }

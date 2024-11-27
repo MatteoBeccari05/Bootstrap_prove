@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Pila ISO/OSI</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
 </head>
+
 <body>
     <nav data-bs-theme="dark">
         <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
@@ -14,7 +18,9 @@
                 <a class="navbar-brand" href="index.html">
                     <img src="images/logo.png" alt="WBSCHOOL Logo" style="height: 40px;">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -32,97 +38,73 @@
                             <a class="nav-link active" href="pila_iso_osi.html">La Pila ISO/OSI</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="stack_tcp_ip.html">Stack TCP/IP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="isoosi_vs_tcpip.html">ISO/OSI vs TCP/IP</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="glossario.html">Glossario</a>
                         </li>
-                       
+
                     </ul>
                 </div>
             </div>
         </nav>
     </nav>
 
-    <!-- Contenuto della pagina -->
     <div class="content">
         <div class="container mt-5">
             <h1 class="text-center mb-4">La Pila ISO/OSI</h1>
-            
-            <p>La pila ISO/OSI (Open Systems Interconnection) è un modello di riferimento utilizzato per descrivere come i dati vengano trasmessi tra i dispositivi di una rete. Il modello è composto da 7 livelli, ognuno dei quali ha una funzione specifica nella gestione e trasmissione dei dati attraverso una rete.</p>
-            
+
+            <p>La pila ISO/OSI (Open Systems Interconnection) è un modello di riferimento utilizzato per descrivere come
+                i dati vengano trasmessi tra i dispositivi di una rete. Il modello è composto da 7 livelli, ognuno dei
+                quali ha una funzione specifica nella gestione e trasmissione dei dati attraverso una rete.</p>
+
             <h3>I 7 Livelli della Pila ISO/OSI</h3>
-            <p>La pila ISO/OSI è composta da sette livelli, che vanno dal livello fisico al livello applicativo. Ecco una panoramica di ciascun livello:</p>
-            
+            <p>La pila ISO/OSI è composta da sette livelli, che vanno dal livello fisico al livello applicativo. Ecco
+                una panoramica di ciascun livello:</p>
+
             <ul>
-                <li><strong>Livello 1: Fisico</strong> - Si occupa della trasmissione fisica dei dati attraverso i mezzi di comunicazione (cavi, fibre ottiche, onde radio, ecc.). Gestisce il segnale elettrico, <a href="https://it.wikipedia.org/wiki/Comunicazioni_ottiche" target="_blank">ottico</a> o radio.</li>
-                <li><strong>Livello 2: Data Link</strong> - Responsabile dell'affidabilità della trasmissione dei dati tra due nodi. Gestisce l'indirizzamento fisico (<a href="https://it.wikipedia.org/wiki/Indirizzo_MAC" target="_blank">MAC address</a>) e il controllo degli errori.</li>
-                <li><strong>Livello 3: Rete</strong> - Si occupa dell'<a href="https://it.wikipedia.org/wiki/Instradamento" target="_blank"> instradamento dei pacchetti </a>di dati tra le reti, utilizzando indirizzi IP per determinare la destinazione dei dati.</li>
-                <li><strong>Livello 4: Trasporto</strong> - Garantisce la trasmissione affidabile dei dati tra le due estremità, utilizzando protocolli come TCP o UDP per il controllo del flusso e la correzione degli errori.</li>
-                <li><strong>Livello 5: Sessione</strong> - Gestisce la creazione, il mantenimento e la terminazione delle sessioni di comunicazione tra due dispositivi, assicurando che la connessione rimanga attiva durante la trasmissione.</li>
-                <li><strong>Livello 6: Presentazione</strong> - Si occupa della traduzione, compressione e cifratura dei dati. Assicura che i dati siano comprensibili all'applicazione ricevente, indipendentemente dalla rappresentazione interna dei dati.</li>
-                <li><strong>Livello 7: Applicazione</strong> - È il livello più vicino all'utente. Gestisce l'interazione diretta tra l'utente e la rete, tramite applicazioni come browser web, email, ecc.</li>
+                <li><strong>Livello 1: Fisico</strong> - Si occupa della trasmissione fisica dei dati attraverso i mezzi
+                    di comunicazione (cavi, fibre ottiche, onde radio, ecc.). Gestisce il segnale elettrico, <a
+                        href="https://it.wikipedia.org/wiki/Comunicazioni_ottiche" target="_blank">ottico</a> o radio.
+                </li>
+                <li><strong>Livello 2: Data Link</strong> - Responsabile dell'affidabilità della trasmissione dei dati
+                    tra due nodi. Gestisce l'indirizzamento fisico (<a
+                        href="https://it.wikipedia.org/wiki/Indirizzo_MAC" target="_blank">MAC address</a>) e il
+                    controllo degli errori.</li>
+                <li><strong>Livello 3: Rete</strong> - Si occupa dell'<a
+                        href="https://it.wikipedia.org/wiki/Instradamento" target="_blank"> instradamento dei pacchetti
+                    </a>di dati tra le reti, utilizzando indirizzi IP per determinare la destinazione dei dati.</li>
+                <li><strong>Livello 4: Trasporto</strong> - Garantisce la trasmissione affidabile dei dati tra le due
+                    estremità, utilizzando protocolli come TCP o UDP per il controllo del flusso e la correzione degli
+                    errori.</li>
+                <li><strong>Livello 5: Sessione</strong> - Gestisce la creazione, il mantenimento e la terminazione
+                    delle sessioni di comunicazione tra due dispositivi, assicurando che la connessione rimanga attiva
+                    durante la trasmissione.</li>
+                <li><strong>Livello 6: Presentazione</strong> - Si occupa della traduzione, compressione e cifratura dei
+                    dati. Assicura che i dati siano comprensibili all'applicazione ricevente, indipendentemente dalla
+                    rappresentazione interna dei dati.</li>
+                <li><strong>Livello 7: Applicazione</strong> - È il livello più vicino all'utente. Gestisce
+                    l'interazione diretta tra l'utente e la rete, tramite applicazioni come browser web, email, ecc.
+                </li>
             </ul>
 
             <img src="images/pila_iso_osi.png" class="img-fluid" alt="Diagramma della Pila ISO/OSI">
             <p class="text-center">Schema del modello ISO/OSI</p>
-            
-            <h3>Differenze tra la Pila ISO/OSI e lo Stack TCP/IP</h3>
-            <p>La Pila ISO/OSI e lo Stack TCP/IP sono entrambi modelli di riferimento per la comunicazione di rete, ma presentano alcune differenze significative. La tabella seguente mette a confronto le principali differenze:</p>
 
-            <!-- Tabella delle differenze tra ISO/OSI e TCP/IP -->
-            <table class="table table-bordered table-striped">
-                <thead>
-                    <tr>
-                        <th>Caratteristica</th>
-                        <th>Pila ISO/OSI</th>
-                        <th>Stack TCP/IP</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Numero di livelli</td>
-                        <td>7</td>
-                        <td>4</td>
-                    </tr>
-                    <tr>
-                        <td>Scopo</td>
-                        <td>Teorico, per descrivere la comunicazione di rete</td>
-                        <td>Pratico, utilizzato per Internet e reti moderne</td>
-                    </tr>
-                    <tr>
-                        <td>Definizione dei livelli</td>
-                        <td>Più dettagliata, con livelli separati per la gestione di sessioni e presentazione</td>
-                        <td>Più sintetica, combinando funzioni in meno livelli</td>
-                    </tr>
-                    <tr>
-                        <td>Livelli principali</td>
-                        <td>Fisico, Data Link, Rete, Trasporto, Sessione, Presentazione, Applicazione</td>
-                        <td>Link, Internet, Trasporto, Applicazione</td>
-                    </tr>
-                    <tr>
-                        <td>Protocolli utilizzati</td>
-                        <td>Teorici, ma descrive protocolli comuni come IP, TCP, UDP, ecc.</td>
-                        <td>Utilizza protocolli reali come IP, TCP, UDP, HTTP, ecc.</td>
-                    </tr>
-                    <tr>
-                        <td>Applicazione</td>
-                        <td>Didattico e di riferimento per la progettazione di sistemi di rete</td>
-                        <td>Utilizzato effettivamente in Internet e nelle reti moderne</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h3>Diagramma del Confronto tra ISO/OSI e TCP/IP</h3>
-            <p>Di seguito è riportato un diagramma che mostra il confronto tra la Pila ISO/OSI e lo Stack TCP/IP:</p>
-            <img src="images/tcp_osi.png" class="img-fluid" alt="Confronto tra ISO/OSI e TCP/IP">
-            
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 WBECKSCHOOL <img src="images/logo.png" alt="WBSCHOOL Logo" style="height: 40px;"></p> 
+        <p>&copy; 2024 WBECKSCHOOL <img src="images/logo.png" alt="WBSCHOOL Logo" style="height: 40px;"></p>
         <p>Matteo Beccari 5F</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="icon" href="../images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../pages/index.html">
+                    <img src="../images/logo.png" alt="WBSCHOOL Logo" style="height: 40px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../pages/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/socket.html">Le socket</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/server_client.html">Server / Client</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="../pages/pila_iso_osi.html">La Pila ISO/OSI</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/stack_tcp_ip.html">Stack TCP/IP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/isoosi_vs_tcpip.html">ISO/OSI vs TCP/IP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../pages/glossario.html">Glossario</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </nav>
+
+    <div class="giustificato">
+        <div class="content">
+            <div class="container mt-5">
+                <h1>Glossario dei termini utilizzati nel sito</h1>
+                <div class="accordion" id="glossaryAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                Stack TCP-IP
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1"
+                            data-bs-parent="#glossaryAccordion">
+                            <div class="accordion-body">
+                                Lo <strong>stack TCP/IP</strong> è un modello di riferimento utilizzato per descrivere
+                                il
+                                funzionamento della comunicazione in rete, come su Internet.
+                                È suddiviso in quattro livelli principali, ognuno con compiti specifici che cooperano
+                                per
+                                garantire il trasferimento dei dati tra dispositivi:
+                                <ul>
+                                    <li><strong>Livello Applicazione</strong>: Include protocolli come HTTP, FTP, e SMTP
+                                        per
+                                        permettere agli utenti di interagire con la rete.</li>
+                                    <li><strong>Livello Trasporto</strong>: Garantisce la trasmissione affidabile dei
+                                        dati
+                                        tramite TCP (affidabile) o UDP (più rapido ma meno sicuro).</li>
+                                    <li><strong>Livello Internet</strong>: Gestisce l'instradamento dei pacchetti con il
+                                        protocollo IP per identificare i dispositivi sulla rete.</li>
+                                    <li><strong>Livello Accesso Rete</strong>: Si occupa della trasmissione fisica dei
+                                        dati
+                                        tramite tecnologie come Ethernet o Wi-Fi.</li>
+                                </ul>
+                                Questo modello consente una comunicazione standardizzata tra dispositivi diversi,
+                                rendendo
+                                possibile l'interconnessione globale che caratterizza Internet.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                Socket
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                            data-bs-parent="#glossaryAccordion">
+                            <div class="accordion-body">
+                                Un <strong>socket</strong> è un'interfaccia software che consente la comunicazione tra
+                                due
+                                applicazioni, sia sulla stessa macchina che su dispositivi diversi in una rete.
+                                I socket sono fondamentali per il funzionamento dei protocolli di rete come TCP e UDP, e
+                                rappresentano i punti finali di una connessione di rete.
+                                I principali aspetti del socket includono:
+                                <ul>
+                                    <li><strong>Connessione TCP</strong>: Il socket crea una connessione affidabile tra
+                                        client e server, garantendo che i dati siano ricevuti nell'ordine corretto.</li>
+                                    <li><strong>Connessione UDP</strong>: Il socket invia pacchetti senza stabilire una
+                                        connessione, risultando più veloce ma meno sicuro.</li>
+                                    <li><strong>Interazione Client-Server</strong>: Viene utilizzato per la
+                                        comunicazione
+                                        tra client (es. browser web) e server (es. server web).</li>
+                                </ul>
+                                Ogni socket è identificato da una coppia di indirizzo IP e numero di porta, che insieme
+                                determinano il dispositivo e il servizio con cui il socket comunica.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                Server
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                            data-bs-parent="#glossaryAccordion">
+                            <div class="accordion-body">
+                                Un <strong>server</strong> è un dispositivo o un programma che fornisce servizi o
+                                risorse a
+                                un altro dispositivo, chiamato <strong>client</strong>, attraverso una rete.
+                                I server sono progettati per gestire richieste provenienti da molti client e rispondere
+                                con
+                                i dati o le risorse richieste. Alcuni tipi comuni di server includono:
+                                <ul>
+                                    <li><strong>Server Web</strong>: Fornisce pagine web e altri contenuti ai browser
+                                        web
+                                        dei client tramite il protocollo HTTP.</li>
+                                    <li><strong>Server di Database</strong>: Gestisce e fornisce l'accesso a grandi
+                                        volumi
+                                        di dati tramite query SQL.</li>
+                                    <li><strong>File Server</strong>: Memorizza e gestisce file, consentendo ai client
+                                        di
+                                        scaricare, caricare o modificare i file tramite la rete.</li>
+                                </ul>
+                                Il server è solitamente sempre attivo e in ascolto su una porta specifica, pronto a
+                                rispondere alle richieste dei client in tempo reale.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                Client
+                            </button>
+                        </h2>
+                        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                            data-bs-parent="#glossaryAccordion">
+                            <div class="accordion-body">
+                                Un <strong>client</strong> è un dispositivo o un programma che accede ai servizi o alle
+                                risorse fornite da un <strong>server</strong> tramite una rete.
+                                I client inviano richieste al server e ricevono risposte in base alle loro necessità. I
+                                client possono essere di diversi tipi, tra cui:
+                                <ul>
+                                    <li><strong>Client Web</strong>: Un browser che richiede pagine web e risorse da un
+                                        server web tramite HTTP.</li>
+                                    <li><strong>Client di Posta Elettronica</strong>: Un'applicazione che invia e riceve
+                                        email tramite server di posta come SMTP o IMAP.</li>
+                                    <li><strong>Client FTP</strong>: Un programma che permette il trasferimento di file
+                                        tra
+                                        il client e un server FTP.</li>
+                                </ul>
+                                Il client stabilisce una connessione al server tramite una rete, invia la sua richiesta
+                                e
+                                attende la risposta. La comunicazione tra client e server avviene utilizzando vari
+                                protocolli, come TCP/IP.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                Pila ISO/OSI
+                            </button>
+                        </h2>
+                        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                            data-bs-parent="#glossaryAccordion">
+                            <div class="accordion-body">
+                                La <strong>Pila ISO/OSI</strong> (International Standards Organization/Open Systems
+                                Interconnection) è un modello di riferimento utilizzato per comprendere e descrivere
+                                come
+                                avviene la comunicazione tra dispositivi su una rete. È composta da sette livelli
+                                distinti,
+                                ognuno dei quali ha una funzione specifica nel processo di comunicazione. I sette
+                                livelli
+                                della pila ISO/OSI sono:
+                                <ul>
+                                    <li><strong>Livello 1 - Fisico</strong>: Gestisce la trasmissione di segnali fisici
+                                        sulla rete, come cavi e segnali elettrici.</li>
+                                    <li><strong>Livello 2 - Collegamento Dati</strong>: Si occupa della trasmissione
+                                        sicura
+                                        dei dati tra dispositivi direttamente connessi, utilizzando tecniche come
+                                        l'indirizzamento MAC.</li>
+                                    <li><strong>Livello 3 - Rete</strong>: Gestisce l'instradamento dei dati attraverso
+                                        diverse reti, utilizzando indirizzi IP e protocolli come il routing.</li>
+                                    <li><strong>Livello 4 - Trasporto</strong>: Garantisce che i dati arrivino
+                                        correttamente
+                                        dal mittente al destinatario, utilizzando protocolli come TCP o UDP.</li>
+                                    <li><strong>Livello 5 - Sessione</strong>: Gestisce la comunicazione tra due
+                                        dispositivi, mantenendo la connessione attiva durante tutta la sessione.</li>
+                                    <li><strong>Livello 6 - Presentazione</strong>: Si occupa della formattazione dei
+                                        dati,
+                                        per esempio codificando o decodificando informazioni tra formati diversi.</li>
+                                    <li><strong>Livello 7 - Applicazione</strong>: Questo è il livello più vicino
+                                        all'utente
+                                        e include le applicazioni e i protocolli utilizzati per l'interazione diretta
+                                        con la
+                                        rete, come HTTP, FTP, SMTP.</li>
+                                </ul>
+                                La pila ISO/OSI serve come riferimento per la progettazione e la comprensione delle
+                                reti, ma
+                                non è implementata direttamente in molti sistemi. Tuttavia, ha un grande impatto su come
+                                i
+                                protocolli di rete sono sviluppati e utilizzati.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading6">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                                TCP (Transmission Control Protocol)
+                            </button>
+                        </h2>
+                        <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6"
+                            data-bs-parent="#glossaryAccordion">
+                            <div class="accordion-body">
+                                Il TCP (Transmission Control Protocol) è un protocollo di trasporto affidabile e
+                                orientato
+                                alla connessione.
+                                È uno dei principali protocolli utilizzati per la trasmissione di dati su Internet.
+                                TCP garantisce che i dati vengano consegnati correttamente e nell'ordine giusto tra il
+                                mittente e il
+                                destinatario. La comunicazione in TCP avviene attraverso un processo di handshake
+                                (scambio
+                                di pacchetti
+                                di sincronizzazione) per stabilire una connessione prima che i dati vengano
+                                effettivamente
+                                inviati.
+                                In caso di perdita di pacchetti, TCP provvede al loro recupero attraverso meccanismi di
+                                ritrasmissione.
+                                È utilizzato in applicazioni dove l'affidabilità è fondamentale, come la navigazione web
+                                (HTTP),
+                                l'invio di email (SMTP) e il trasferimento di file (FTP).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading7">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                                UDP (User Datagram Protocol)
+                            </button>
+                        </h2>
+                        <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7"
+                            data-bs-parent="#glossaryAccordion">
+                            <div class="accordion-body">
+                                L'UDP (User Datagram Protocol) è un protocollo di trasporto senza connessione e non
+                                affidabile.
+                                A differenza del TCP, UDP non garantisce la consegna dei dati, né l'ordine in cui
+                                vengono
+                                ricevuti.
+                                Viene utilizzato per applicazioni che richiedono una trasmissione rapida dei dati, come
+                                lo
+                                streaming
+                                video, i giochi online e la telefonia VoIP, dove la velocità di trasmissione è più
+                                importante della
+                                completezza e dell'ordine dei dati. UDP invia i dati in pacchetti chiamati "datagrammi",
+                                ma non stabilisce una connessione tra il mittente e il destinatario, il che lo rende più
+                                veloce ma meno
+                                sicuro rispetto a TCP.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading8">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                                Porta
+                            </button>
+                        </h2>
+                        <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8"
+                            data-bs-parent="#glossaryAccordion">
+                            <div class="accordion-body">
+                                Una porta è un punto di accesso logico attraverso il quale un computer o un altro
+                                dispositivo può inviare e ricevere dati in una rete. Le porte sono numerate
+                                e permettono di distinguere tra diversi tipi di traffico che transitano su una rete.
+                                Ogni
+                                servizio di rete, come un server web (HTTP) o un server di posta elettronica (SMTP),
+                                opera su una porta specifica. Ad esempio, la porta 80 è utilizzata per il traffico HTTP,
+                                mentre la porta 443 è utilizzata per HTTPS (HTTP sicuro). Le porte possono essere di due
+                                tipi:
+                                <ul>
+                                    <li><strong>Porte Well-Known</strong>: numeri da 0 a 1023, utilizzate per i
+                                        principali
+                                        servizi di rete.</li>
+                                    <li><strong>Porte Registrate</strong>: numeri da 1024 a 49151, usate da applicazioni
+                                        e
+                                        servizi specifici.</li>
+                                </ul>
+                                Le porte sono una parte essenziale del modello di comunicazione basato su TCP/IP.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading9">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                                HTTP (HyperText Transfer Protocol)
+                            </button>
+                        </h2>
+                        <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9"
+                            data-bs-parent="#glossaryAccordion">
+                            <div class="accordion-body">
+                                HTTP (HyperText Transfer Protocol) è un protocollo di comunicazione utilizzato per il
+                                trasferimento di dati su internet. È il fondamento di ogni interazione tra client e
+                                server
+                                nel World Wide Web. HTTP è un protocollo stateless, cioè non mantiene alcuna
+                                informazione
+                                tra le richieste successive, il che significa che ogni richiesta HTTP è indipendente
+                                dalle
+                                precedenti.
+                                <br><br>
+                                Una tipica interazione HTTP implica che il client (ad esempio, un browser web) invii una
+                                richiesta al server per recuperare una risorsa (come una pagina web o un'immagine). Il
+                                server, quindi, risponde con i dati richiesti. HTTP funziona utilizzando il modello
+                                client-server e opera sulla porta 80 di default.
+                                <br><br>
+                                Esistono due versioni principali di HTTP:
+                                <ul>
+                                    <li><strong>HTTP/1.1</strong>: La versione più utilizzata di HTTP, che ha introdotto
+                                        diverse ottimizzazioni rispetto alla versione precedente.</li>
+                                    <li><strong>HTTP/2</strong>: Una versione più recente che migliora le performance
+                                        rispetto a HTTP/1.1, supportando il multiplexing delle richieste e una maggiore
+                                        efficienza nella gestione delle connessioni.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading10">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                                MAC Address (Media Access Control Address)
+                            </button>
+                        </h2>
+                        <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10"
+                            data-bs-parent="#glossaryAccordion">
+                            <div class="accordion-body">
+                                Un MAC Address (Media Access Control Address) è un identificatore univoco assegnato a un
+                                dispositivo di rete per l'accesso a una rete di comunicazione. Si tratta di un indirizzo
+                                a
+                                livello di collegamento dati che viene utilizzato per indirizzare i pacchetti tra
+                                dispositivi nella rete locale (LAN).
+                                <br><br>
+                                I MAC address sono assegnati dai produttori di schede di rete (NIC - Network Interface
+                                Card)
+                                e sono generalmente incorporati nel dispositivo stesso. Un MAC Address è composto da 48
+                                bit,
+                                espressi come 12 caratteri esadecimali, ed è generalmente scritto in sei coppie di
+                                caratteri
+                                separati da due punti o trattini (ad esempio, 00:1A:2B:3C:4D:5E).
+                                <br><br>
+                                I MAC address vengono utilizzati per la comunicazione all'interno di una rete locale
+                                (LAN) e
+                                non sono visibili o utilizzabili su Internet. Tuttavia, sono fondamentali per il
+                                corretto
+                                funzionamento dei protocolli di rete, come Ethernet e Wi-Fi. Un altro concetto
+                                importante
+                                legato ai MAC address è il "filtraggio MAC", che viene utilizzato nelle reti Wi-Fi per
+                                limitare l'accesso solo ai dispositivi con indirizzi MAC autorizzati.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading11">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                                Indirizzo IP (Internet Protocol Address)
+                            </button>
+                        </h2>
+                        <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11"
+                            data-bs-parent="#glossaryAccordion">
+                            <div class="accordion-body">
+                                Un indirizzo IP (Internet Protocol Address) è un identificatore univoco assegnato a
+                                ciascun
+                                dispositivo connesso a una rete che utilizza il protocollo Internet (IP). Questo
+                                indirizzo
+                                consente ai dispositivi di comunicare tra loro all'interno della rete o attraverso
+                                Internet.
+                                <br><br>
+                                Esistono due versioni principali di indirizzi IP:
+                                <ul>
+                                    <li><strong>IPv4</strong>: Il formato più comune, che utilizza indirizzi a 32 bit,
+                                        scritti come quattro gruppi di numeri decimali separati da punti (ad esempio,
+                                        192.168.1.1). Con IPv4, ci sono circa 4 miliardi di indirizzi disponibili, ma a
+                                        causa dell'esaurimento degli indirizzi, sono stati sviluppati nuovi standard.
+                                    </li>
+                                    <li><strong>IPv6</strong>: Una versione più recente, che utilizza indirizzi a 128
+                                        bit,
+                                        scritti come otto gruppi di quattro caratteri esadecimali separati da due punti
+                                        (ad
+                                        esempio, 2001:0db8:85a3:0000:0000:8a2e:0370:7334). IPv6 è stato introdotto per
+                                        risolvere il problema dell'esaurimento degli indirizzi IPv4 e offre un numero
+                                        significativamente maggiore di indirizzi.</li>
+                                </ul>
+                                Gli indirizzi IP possono essere classificati in due categorie:
+                                <ul>
+                                    <li><strong>Indirizzi IP pubblici</strong>: Unici su Internet, utilizzati per
+                                        identificare dispositivi che devono essere accessibili da altre reti, come i
+                                        server
+                                        web.</li>
+                                    <li><strong>Indirizzi IP privati</strong>: Utilizzati all'interno di reti locali
+                                        (LAN) e
+                                        non sono visibili direttamente su Internet. Questi indirizzi appartengono a
+                                        determinati intervalli definiti dallo standard, come 192.168.x.x o 10.x.x.x.
+                                    </li>
+                                </ul>
+                                L'assegnazione degli indirizzi IP è gestita da enti come l'IANA (Internet Assigned
+                                Numbers
+                                Authority) e gli ISP (Internet Service Providers) che allocano gli indirizzi ai loro
+                                clienti.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading12">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                                Database
+                            </button>
+                        </h2>
+                        <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12"
+                            data-bs-parent="#glossaryAccordion">
+                            <div class="accordion-body">
+                                Un <strong>database</strong> è un sistema organizzato per raccogliere, gestire e
+                                archiviare
+                                dati in modo strutturato, così che possano essere facilmente recuperati, modificati e
+                                gestiti. I database vengono utilizzati in una vasta gamma di applicazioni, come la
+                                gestione
+                                di dati aziendali, la registrazione di transazioni e l'archiviazione di informazioni in
+                                vari
+                                settori, tra cui sanità, commercio elettronico e social media.
+                                <br><br>
+                                Esistono due tipi principali di database:
+                                <ul>
+                                    <li><strong>Database relazionali (RDBMS)</strong>: Questi database organizzano i
+                                        dati in
+                                        tabelle interconnesse tramite relazioni. Le informazioni sono strutturate in
+                                        righe e
+                                        colonne, e i dati possono essere facilmente interrogati utilizzando il
+                                        linguaggio
+                                        SQL (Structured Query Language). Esempi di database relazionali sono MySQL,
+                                        PostgreSQL, Microsoft SQL Server e Oracle.</li>
+                                    <li><strong>Database NoSQL</strong>: Questi database sono progettati per gestire
+                                        grandi
+                                        quantità di dati non strutturati o semi-strutturati. A differenza dei database
+                                        relazionali, non utilizzano tabelle con righe e colonne fisse. I database NoSQL
+                                        sono
+                                        spesso usati per applicazioni che richiedono alta scalabilità e velocità di
+                                        accesso
+                                        ai dati. Esempi di database NoSQL sono MongoDB, Cassandra e Redis.</li>
+                                </ul>
+                                I database possono essere ospitati su server locali (on-premise) o su cloud, offrendo
+                                vantaggi come la scalabilità, la sicurezza dei dati e l'accesso remoto. La gestione di
+                                un
+                                database implica operazioni come l'inserimento, la modifica, l'eliminazione e la
+                                consultazione dei dati, tutte realizzate tramite query.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading13">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
+                                LAN (Local Area Network)
+                            </button>
+                        </h2>
+                        <div id="collapse13" class="accordion-collapse collapse" aria-labelledby="heading13"
+                            data-bs-parent="#glossaryAccordion">
+                            <div class="accordion-body">
+                                Una <strong>LAN (Local Area Network)</strong> è una rete di computer che copre una
+                                piccola
+                                area geografica, come una casa, un ufficio o un campus universitario. Le LAN sono
+                                utilizzate
+                                per connettere dispositivi tra loro, consentendo la condivisione di risorse, come file,
+                                stampanti e connessioni a Internet. Le LAN sono caratterizzate da velocità di
+                                trasmissione
+                                elevate e bassa latenza, rendendole ideali per ambienti in cui la condivisione rapida di
+                                dati è essenziale.
+                                <br><br>
+                                Le LAN possono essere implementate utilizzando vari tipi di tecnologie, tra cui:
+                                <ul>
+                                    <li><strong>Ethernet</strong>: Una delle tecnologie più comuni per la creazione di
+                                        LAN
+                                        cablate, che utilizza cavi in fibra ottica o cavi coassiali per trasmettere dati
+                                        tra
+                                        i dispositivi della rete.</li>
+                                    <li><strong>Wi-Fi</strong>: Una tecnologia wireless che consente la connessione di
+                                        dispositivi a una LAN senza l'uso di cavi. Wi-Fi è molto utilizzato per la
+                                        connessione di dispositivi mobili come laptop, smartphone e tablet.</li>
+                                </ul>
+                                Le LAN possono essere classificate come <strong>rete cablata</strong>, quando tutti i
+                                dispositivi sono connessi tramite cavi fisici, o <strong>rete wireless</strong>, quando
+                                i
+                                dispositivi sono connessi tramite segnali radio.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading14">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
+                                FTP (File Transfer Protocol)
+                            </button>
+                        </h2>
+                        <div id="collapse14" class="accordion-collapse collapse" aria-labelledby="heading14"
+                            data-bs-parent="#glossaryAccordion">
+                            <div class="accordion-body">
+                                <strong>FTP (File Transfer Protocol)</strong> è un protocollo di rete utilizzato per
+                                trasferire file tra computer
+                                tramite una rete TCP/IP. FTP è uno dei protocolli di comunicazione più antichi e viene
+                                comunemente utilizzato
+                                per caricare e scaricare file su server remoti. Può essere utilizzato per trasferire
+                                file in entrambe le
+                                direzioni, dal client al server e viceversa.
+                                <br><br>
+                                Il protocollo FTP funziona in due modalità:
+                                <ul>
+                                    <li><strong>Modalità attiva</strong>: Il client stabilisce una connessione con il
+                                        server e il server
+                                        stabilisce una connessione di ritorno al client per il trasferimento dei dati.
+                                    </li>
+                                    <li><strong>Modalità passiva</strong>: Il client stabilisce entrambe le connessioni
+                                        (comando e dati)
+                                        al server, spesso utilizzata per aggirare i firewall e i router che bloccano le
+                                        connessioni
+                                        in ingresso.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading15">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
+                                SMTP (Simple Mail Transfer Protocol)
+                            </button>
+                        </h2>
+                        <div id="collapse15" class="accordion-collapse collapse" aria-labelledby="heading15"
+                            data-bs-parent="#glossaryAccordion">
+                            <div class="accordion-body">
+                                <strong>SMTP (Simple Mail Transfer Protocol)</strong> è un protocollo di comunicazione
+                                utilizzato per
+                                l'invio di email su Internet. SMTP è il protocollo di riferimento per la trasmissione di
+                                messaggi di posta
+                                elettronica da un server all'altro o da un client al server di invio, ma non viene
+                                utilizzato per il recupero
+                                delle email. Questo compito è affidato a protocolli come POP3 o IMAP.
+                                <br><br>
+                                SMTP opera sulla base di un modello client-server, in cui il client (ad esempio,
+                                un'applicazione di posta elettronica)
+                                invia un messaggio al server SMTP, che lo instrada verso il server del destinatario. Il
+                                server del destinatario
+                                utilizza a sua volta SMTP per inviare il messaggio ad altri server, fino a raggiungere
+                                la casella di posta
+                                del destinatario.
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 WBECKSCHOOL <img src="../images/logo.png" alt="WBSCHOOL Logo" style="height: 50px;"></p>
+        <p>Matteo Beccari 5F</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

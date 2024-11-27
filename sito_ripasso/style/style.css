@@ -1,0 +1,26 @@
+/* Imposta l'altezza di tutta la pagina */
+html, body {
+    height: 100%;
+}
+
+/* Contenuto della pagina */
+.content {
+    min-height: 100%; /* La sezione di contenuto occupa almeno tutta la pagina */
+    padding-bottom: 60px; /* Distanza del footer dalla parte inferiore */
+}
+
+/* Footer */
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    /* Spazio sufficiente per evitare che il contenuto si sovrapponga */
+}
+
+body {
+    padding-top: 40px; /* margine superiore per evitare che il contenuto venga nascosto dalla navbar */
+}
+
+.giustificato {
+    text-align: justify;
+}

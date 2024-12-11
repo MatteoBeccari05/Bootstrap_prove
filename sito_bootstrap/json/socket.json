@@ -1,0 +1,76 @@
+{
+    "navbar": {
+      "home": "Home",
+      "socket": "Le socket",
+      "server_client": "Server / Client",
+      "pila_iso_osi": "La Pila ISO/OSI",
+      "stack_tcp_ip": "Stack TCP/IP",
+      "isoosi_vs_tcpip": "ISO/OSI vs TCP/IP",
+      "glossario": "Glossario"
+    },
+    "content": {
+      "title": "Le socket",
+      "description": "Una <b>socket</b> è un'interfaccia software che consente la comunicazione tra due dispositivi in una rete. In altre parole, una socket è un'interfaccia che consente a due applicazioni, che si trovano su dispositivi diversi, di scambiarsi dati tramite una rete, come Internet o una rete locale (LAN). Le socket sono utilizzate per stabilire e gestire connessioni tra client e server, che possono essere in esecuzione su computer diversi, permettendo loro di comunicare tra di loro.",
+      "socket_types": {
+        "title": "Tipologie di Socket",
+        "list": [
+          {
+            "name": "Stream Socket (TCP)",
+            "description": "Queste socket utilizzano il protocollo TCP per garantire una comunicazione affidabile e ordinata. Ogni pacchetto inviato viene ricevuto correttamente, e se necessario, vengono gestiti eventuali errori. Sono ideali per applicazioni che richiedono affidabilità, come il web, email, e trasferimenti di file."
+          },
+          {
+            "name": "Datagram Socket (UDP)",
+            "description": "Queste socket utilizzano il protocollo UDP, che è più veloce ma non garantisce l'affidabilità o l'ordinamento dei pacchetti. Questo tipo di socket è adatto per applicazioni dove la velocità è più importante dell'affidabilità, come nel caso di streaming video, giochi online, o chiamate VoIP."
+          }
+        ]
+      },
+      "process": {
+        "title": "Processo di Comunicazione tramite Socket",
+        "steps": [
+          {
+            "title": "Creazione della socket",
+            "description": "Il server e il client creano una socket, che è l'oggetto principale per la comunicazione."
+          },
+          {
+            "title": "Collegamento",
+            "description": "La socket del client si connette alla socket del server utilizzando un indirizzo IP e una porta specifica. Il server è in ascolto di eventuali richieste di connessione sulla porta a lui associata."
+          },
+          {
+            "title": "Scambio di dati",
+            "description": "Una volta che la connessione è stabilita, i due dispositivi possono scambiarsi dati. La comunicazione può avvenire in entrambe le direzioni, a seconda delle necessità dell'applicazione."
+          },
+          {
+            "title": "Chiusura della connessione",
+            "description": "Una volta completata la trasmissione dei dati, una delle due parti può chiudere la connessione, terminando il processo di comunicazione."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Esempi di Applicazioni Reali",
+        "list": [
+          {
+            "name": "Applicazioni Web",
+            "description": "I browser utilizzano socket per connettersi ai server web."
+          },
+          {
+            "name": "Chat",
+            "description": "Le applicazioni di messaggistica come WhatsApp e Telegram usano socket per trasferire messaggi."
+          },
+          {
+            "name": "Streaming",
+            "description": "Servizi come Netflix e Spotify utilizzano socket per lo streaming di video e audio."
+          },
+          {
+            "name": "Giochi Online",
+            "description": "Le socket gestiscono la comunicazione tra i giocatori e il server del gioco."
+          }
+        ]
+      },
+      "image": "../images/socket_tcpip.png",
+      "footer": {
+        "copyright": "© 2024 WBECKSCHOOL",
+        "author": "Matteo Beccari 5F"
+      }
+    }
+  }
+  

@@ -1,0 +1,74 @@
+{
+    "title": "La Pila ISO/OSI",
+    "navbar": {
+      "brand": {
+        "href": "../pages/index.html",
+        "logo": "../images/logo.png",
+        "alt": "WBSCHOOL Logo",
+        "height": "40px"
+      },
+      "items": [
+        { "text": "Home", "href": "../pages/index.html" },
+        { "text": "Le socket", "href": "../pages/socket.html" },
+        { "text": "Server / Client", "href": "../pages/server_client.html" },
+        { "text": "La Pila ISO/OSI", "href": "../pages/pila_iso_osi.html", "active": true },
+        { "text": "Stack TCP/IP", "href": "../pages/stack_tcp_ip.html" },
+        { "text": "ISO/OSI vs TCP/IP", "href": "../pages/isoosi_vs_tcpip.html" },
+        { "text": "Glossario", "href": "../pages/glossario.html" }
+      ]
+    },
+    "content": {
+      "header": {
+        "title": "La Pila ISO/OSI",
+        "description": "La pila ISO/OSI (Open Systems Interconnection) è un modello di riferimento utilizzato per descrivere come i dati vengano trasmessi tra i dispositivi di una rete. Il modello è composto da 7 livelli, ognuno dei quali ha una funzione specifica nella gestione e trasmissione dei dati attraverso una rete."
+      },
+      "levels": [
+        {
+          "title": "Livello 1: Fisico",
+          "description": "Si occupa della trasmissione fisica dei dati attraverso i mezzi di comunicazione (cavi, fibre ottiche, onde radio, ecc.). Gestisce il segnale elettrico, ottico o radio. È responsabile della conversione dei dati in segnali fisici (elettrici, ottici, radio) che rappresentano i bit.",
+          "example": "Ethernet, Wi-Fi, fibra ottica",
+          "link": "https://it.wikipedia.org/wiki/Comunicazioni_ottiche"
+        },
+        {
+          "title": "Livello 2: Data Link",
+          "description": "Responsabile dell'affidabilità della trasmissione dei dati tra due nodi. Gestisce l'indirizzamento fisico (MAC address) e il controllo degli errori.",
+          "example": "Ethernet, Wi-Fi, PPP",
+          "link": "https://it.wikipedia.org/wiki/Indirizzo_MAC"
+        },
+        {
+          "title": "Livello 3: Rete",
+          "description": "Si occupa dell'instradamento dei pacchetti di dati tra le reti, utilizzando indirizzi IP per determinare la destinazione dei dati.",
+          "example": "IP, ICMP",
+          "link": "https://it.wikipedia.org/wiki/Instradamento"
+        },
+        {
+          "title": "Livello 4: Trasporto",
+          "description": "Garantisce la trasmissione affidabile dei dati tra le due estremità, utilizzando protocolli come TCP o UDP per il controllo del flusso e la correzione degli errori.",
+          "example": "TCP, UDP"
+        },
+        {
+          "title": "Livello 5: Sessione",
+          "description": "Gestisce la creazione, il mantenimento e la terminazione delle sessioni di comunicazione tra due dispositivi, assicurando che la connessione rimanga attiva durante la trasmissione."
+        },
+        {
+          "title": "Livello 6: Presentazione",
+          "description": "Si occupa della traduzione, compressione e cifratura dei dati. Assicura che i dati siano comprensibili all'applicazione ricevente, indipendentemente dalla rappresentazione interna dei dati."
+        },
+        {
+          "title": "Livello 7: Applicazione",
+          "description": "È il livello più vicino all'utente. Gestisce l'interazione diretta tra l'utente e la rete, tramite applicazioni come browser web, email, ecc.",
+          "example": "HTTP, SMTP, FTP"
+        }
+      ],
+      "image": {
+        "src": "../images/pila_iso_osi.png",
+        "alt": "Diagramma della Pila ISO/OSI"
+      }
+    },
+    "footer": {
+      "text": "&copy; 2024 WBECKSCHOOL",
+      "logo": "../images/logo.png",
+      "author": "Matteo Beccari 5F"
+    }
+  }
+  

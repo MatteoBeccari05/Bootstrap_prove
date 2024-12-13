@@ -1,46 +1,45 @@
 {
-    "navbar": {
-      "home": "Home",
-      "socket": "Le socket",
-      "server_client": "Server / Client",
-      "pila_iso_osi": "La Pila ISO/OSI",
-      "stack_tcp_ip": "Stack TCP/IP",
-      "isoosi_vs_tcpip": "ISO/OSI vs TCP/IP",
-      "glossario": "Glossario"
+  "navbar": {
+    "home": "Home",
+    "socket": "Le socket",
+    "server_client": "Server / Client",
+    "pila_iso_osi": "La Pila ISO/OSI",
+    "stack_tcp_ip": "Stack TCP/IP",
+    "isoosi_vs_tcpip": "ISO/OSI vs TCP/IP",
+    "glossario": "Glossario"
+  },
+  "content": {
+    "navbar": "<li class='nav-item'><a class='nav-link' href='../pages/index.html'>Home</a></li><li class='nav-item'><a class='nav-link' href='../pages/socket.html'>Le socket</a></li><li class='nav-item'><a class='nav-link active' href='../pages/server_client.html'>Server / Client</a></li><li class='nav-item'><a class='nav-link' href='../pages/pila_iso_osi.html'>La Pila ISO/OSI</a></li><li class='nav-item'><a class='nav-link' href='../pages/stack_tcp_ip.html'>Stack TCP/IP</a></li><li class='nav-item'><a class='nav-link' href='../pages/isoosi_vs_tcpip.html'>ISO/OSI vs TCP/IP</a></li><li class='nav-item'><a class='nav-link' href='../pages/glossario.html'>Glossario</a></li>",
+    "title": "Architettura Server-Client",
+    "description": "L'architettura client-server è un modello di progettazione di sistemi informatici in cui le risorse e i servizi sono distribuiti tra due entità principali: il client e il server. Questo modello è alla base di molte applicazioni moderne, inclusi i servizi web, le reti aziendali e le applicazioni mobili. L'architettura client-server è un modello fondamentale per la costruzione di applicazioni distribuite, dove la separazione dei ruoli tra client e server consente un'elaborazione più efficiente, centralizzata e sicura. Questo modello è molto usato in vari settori, tra cui il web, le applicazioni aziendali, i giochi online e i sistemi di gestione dei dati.",
+    "server": {
+      "title": "Che cos'è un Server?",
+      "description": "Un server è un dispositivo o software che fornisce risorse, dati o servizi a uno o più client su una rete. Esempi di server includono server web (che ospitano siti web), server di posta elettronica e server di database. I server sono progettati per gestire e rispondere a richieste provenienti da uno o più client, utilizzando specifici protocolli di comunicazione. Esistono diversi tipi di server a seconda delle funzionalità che offrono, come i web server, che gestiscono le richieste di pagine web, o i file server, che archivia e fornisce accesso a file."
     },
-    "content": {
-      "title": "Architettura Server-Client",
-      "description": "L'architettura client-server è un modello di progettazione di sistemi informatici in cui le risorse e i servizi sono distribuiti tra due entità principali: il client e il server. Questo modello è alla base di molte applicazioni moderne, inclusi i servizi web, le reti aziendali e le applicazioni mobili. L'architettura client-server è un modello fondamentale per la costruzione di applicazioni distribuite, dove la separazione dei ruoli tra client e server consente un'elaborazione più efficiente, centralizzata e sicura. Questo modello è molto usato in vari settori, tra cui il web, le applicazioni aziendali, i giochi online e i sistemi di gestione dei dati.",
-      "server": {
-        "title": "Che cos'è un Server?",
-        "description": "Un server è un dispositivo o software che fornisce risorse, dati o servizi a uno o più client su una rete. Esempi di server includono server web (che ospitano siti web), server di posta elettronica e server di database. I server sono progettati per gestire e rispondere a richieste provenienti da uno o più client, utilizzando specifici protocolli di comunicazione. Esistono diversi tipi di server a seconda delle funzionalità che offrono, come i web server, che gestiscono le richieste di pagine web, o i file server, che archivia e fornisce accesso a file."
-      },
-      "client": {
-        "title": "Che cos'è un Client?",
-        "description": "Un client è un dispositivo o un'applicazione che invia richieste al server per accedere a risorse o servizi. Ad esempio, un browser web è un client che richiede pagine web ai server. Il client invia richieste al server, che elabora e restituisce i dati o i servizi richiesti. I client possono essere dispositivi fisici, come computer, smartphone o tablet, o applicazioni software, come browser web o client di posta elettronica."
-      },
-      "how_it_works": {
-        "title": "Come funziona l'architettura Server-Client?",
-        "steps": [
-          {
-            "title": "Richiesta",
-            "description": "Il client invia una richiesta al server per ottenere una risorsa o avviare un'azione specifica. La richiesta include informazioni come il tipo di azione (ad esempio, visualizzare una pagina web o ottenere dati), eventuali parametri necessari (come ID utente o query di ricerca) e il metodo di comunicazione (ad esempio, HTTP per il web)."
-          },
-          {
-            "title": "Elaborazione",
-            "description": "Il server riceve la richiesta, la verifica e la elabora. Questo potrebbe comportare il recupero di dati da un database, l'elaborazione della logica applicativa o l'accesso a servizi esterni."
-          },
-          {
-            "title": "Risposta",
-            "description": "Il server invia una risposta al client, che può contenere dati (come una pagina HTML, un file JSON o un'immagine) o semplicemente una conferma di successo o errore. Il client riceve la risposta e la utilizza per completare l'azione richiesta."
-          }
-        ]
-      },
-      "image": "../images/cs.png",
-      "footer": {
-        "copyright": "© 2024 WBECKSCHOOL",
-        "author": "Matteo Beccari 5F"
-      }
+    "client": {
+      "title": "Che cos'è un Client?",
+      "description": "Un client è un dispositivo o un'applicazione che invia richieste al server per accedere a risorse o servizi. Ad esempio, un browser web è un client che richiede pagine web ai server. Il client invia richieste al server, che elabora e restituisce i dati o i servizi richiesti. I client possono essere dispositivi fisici, come computer, smartphone o tablet, o applicazioni software, come browser web o client di posta elettronica."
+    },
+    "how_it_works": {
+      "title": "Come funziona l'architettura Server-Client?",
+      "steps": [
+        {
+          "title": "Richiesta",
+          "description": "Il client invia una richiesta al server per ottenere una risorsa o avviare un'azione specifica. La richiesta include informazioni come il tipo di azione (ad esempio, visualizzare una pagina web o ottenere dati), eventuali parametri necessari (come ID utente o query di ricerca) e il metodo di comunicazione (ad esempio, HTTP per il web)."
+        },
+        {
+          "title": "Elaborazione",
+          "description": "Il server riceve la richiesta, la verifica e la elabora. Questo potrebbe comportare il recupero di dati da un database, l'elaborazione della logica applicativa o l'accesso a servizi esterni."
+        },
+        {
+          "title": "Risposta",
+          "description": "Il server invia una risposta al client, che può contenere dati (come una pagina HTML, un file JSON o un'immagine) o semplicemente una conferma di successo o errore. Il client riceve la risposta e la utilizza per completare l'azione richiesta."
+        }
+      ]
+    },
+    "image": "../images/cs.png",
+    "footer": {
+      "content": "<p>© 2024 WBECKSCHOOL <img src='../images/logo.png' alt='WBSCHOOL Logo' style='height: 50px;'></p><p>Matteo Beccari 5F</p>"
     }
   }
-  
+}

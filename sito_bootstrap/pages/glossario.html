@@ -24,28 +24,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="../pages/index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/socket.html">Le socket</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/server_client.html">Server / Client</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="../pages/pila_iso_osi.html">La Pila ISO/OSI</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/stack_tcp_ip.html">Stack TCP/IP</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/isoosi_vs_tcpip.html">ISO/OSI vs TCP/IP</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="../pages/glossario.html">Glossario</a>
-                        </li>
+                    <ul class="navbar-nav" id="navbarLinks">
                     </ul>
                 </div>
             </div>
@@ -55,22 +34,23 @@
     <div class="giustificato">
         <div class="content">
             <div class="container mt-5">
-                <h1>Glossario dei termini utilizzati nel sito</h1>
-                <div class="accordion" id="glossaryAccordion" id="accordion-container">
+                <h1 class="content-title">Glossario dei termini utilizzati nel sito</h1>
+                <div class="accordion" id="glossaryAccordion">
                 </div>
             </div>
         </div>
     </div>
 
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 WBECKSCHOOL <img src="../images/logo.png" alt="WBSCHOOL Logo" style="height: 50px;"></p>
-        <p>Matteo Beccari 5F</p>
+    <footer class="bg-dark text-white text-center py-3" id="footer">
     </footer>
+    
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="/script/glossario.js"></script> 
+
+    <script src="../script/glossario.js"></script>
 </body>
 
 </html>

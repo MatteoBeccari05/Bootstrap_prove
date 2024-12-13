@@ -13,6 +13,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    margin-top: auto; /* Spinge il footer in fondo */
 }
 
 body {
@@ -22,4 +23,5 @@ body {
 .giustificato {
     text-align: justify;   /*testo giustificato*/
 }
+
 

@@ -1,3 +1,16 @@
+document.addEventListener('DOMContentLoaded', function () {
+    // Impedisci la copia del testo
+    document.body.addEventListener('copy', (event) => {
+        event.preventDefault();
+        console.warn('Copia del testo non consentita!');
+    });
+    document.body.style.userSelect = 'none';
+    document.body.addEventListener('contextmenu', (event) => {
+        event.preventDefault();
+        console.warn('Clic destro disabilitato!');
+    });
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     fetch('../json/pila_isoosi.json')
         .then(response => response.json())

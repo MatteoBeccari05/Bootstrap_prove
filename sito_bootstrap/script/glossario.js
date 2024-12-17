@@ -1,5 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('../json/glossario.json')
+    // Impedisci la copia del testo
+    document.body.addEventListener('copy', (event) => {
+        event.preventDefault();
+        console.warn('Copia del testo non consentita!');
+    });
+    document.body.style.userSelect = 'none';
+    document.body.addEventListener('contextmenu', (event) => {
+        event.preventDefault();
+        console.warn('Clic destro disabilitato!');
+    });
+});
+
+fetch('../json/glossario.json')
         .then(response => response.json())
         .then(data => {
             const navbarContainer = document.querySelector('nav .container-fluid');
@@ -23,15 +35,18 @@ document.addEventListener('DOMContentLoaded', function () {
             contentTitle.textContent = data.content.title;
             const accordionContainer = document.getElementById('glossaryAccordion');
             data.content.accordion.forEach((entry, index) => {
+                const isExpanded = index === 0 ? 'true' : 'false';
+                const showClass = index === 0 ? ' show' : '';
+
                 const accordionItem = document.createElement('div');
                 accordionItem.classList.add('accordion-item');
                 accordionItem.innerHTML = `
                     <h2 class="accordion-header" id="heading${index}">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${index}" aria-expanded="true" aria-controls="collapse${index}">
+                        <button class="accordion-button${index !== 0 ? ' collapsed' : ''}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${index}" aria-expanded="${isExpanded}" aria-controls="collapse${index}">
                             ${entry.title}
                         </button>
                     </h2>
-                    <div id="collapse${index}" class="accordion-collapse collapse" aria-labelledby="heading${index}" data-bs-parent="#glossaryAccordion">
+                    <div id="collapse${index}" class="accordion-collapse collapse${showClass}" aria-labelledby="heading${index}" data-bs-parent="#glossaryAccordion">
                         <div class="accordion-body">
                             ${entry.content}
                             <ul class="list-group mt-3">
@@ -56,4 +71,3 @@ document.addEventListener('DOMContentLoaded', function () {
         .catch(error => {
             console.error('Errore nel caricare il file JSON:', error);
         });
-});

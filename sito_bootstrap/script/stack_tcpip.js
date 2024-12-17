@@ -1,44 +1,81 @@
-fetch('../json/stack_tcpip.json')
-  .then(response => response.json())
-  .then(data => {
-    // Navbar
-    const navbarLinks = data.navbar;
-    const navbar = document.querySelector('nav .navbar-nav');
-    navbar.innerHTML = `
-      <li class="nav-item"><a class="nav-link" href="../pages/index.html">${navbarLinks.home}</a></li>
-      <li class="nav-item"><a class="nav-link" href="../pages/socket.html">${navbarLinks.socket}</a></li>
-      <li class="nav-item"><a class="nav-link" href="../pages/server_client.html">${navbarLinks.server_client}</a></li>
-      <li class="nav-item"><a class="nav-link" href="../pages/pila_iso_osi.html">${navbarLinks.pila_iso_osi}</a></li>
-      <li class="nav-item"><a class="nav-link active" href="../pages/stack_tcp_ip.html">${navbarLinks.stack_tcp_ip}</a></li>
-      <li class="nav-item"><a class="nav-link" href="../pages/isoosi_vs_tcpip.html">${navbarLinks.isoosi_vs_tcpip}</a></li>
-      <li class="nav-item"><a class="nav-link" href="../pages/glossario.html">${navbarLinks.glossario}</a></li>
-    `;
-    
-    // Contenuto
-    const content = data.content;
-    const contentDiv = document.querySelector('.content .container');
-    contentDiv.innerHTML = `
-      <h1 class="text-center mb-4">${content.title}</h1>
-      <p class="giustificato">${content.description}</p>
 
-      ${content.layers.map(layer => `
-        <h3>${layer.title}</h3>
-        <p class="giustificato">${layer.description}</p>
-      `).join('')}
-
-      <img src="${content.image}" alt="Livello Accesso alla Rete" class="img-fluid mb-4">
-
-    `;
-
-    // Footer
-    const footer = data.content.footer;
-    const footerDiv = document.querySelector('footer');
-    footerDiv.innerHTML = `
-      <p>${footer.copyright} <img src="../images/logo.png" alt="WBSCHOOL Logo" style="height: 50px;"></p>
-      <p>${footer.author}</p>
-    `;
-  })
-  .catch(error => {
-    console.error('Errore nel caricamento del file JSON:', error);
+document.addEventListener('DOMContentLoaded', function () {
+  // Impedisci la copia del testo
+  document.body.addEventListener('copy', (event) => {
+      event.preventDefault();
+      console.warn('Copia del testo non consentita!');
   });
+  document.body.style.userSelect = 'none';
+  document.body.addEventListener('contextmenu', (event) => {
+      event.preventDefault();
+      console.warn('Clic destro disabilitato!');
+  });
+});
 
+
+document.addEventListener('DOMContentLoaded', function () {
+  
+  fetch('../json/stack_tcpip.json') 
+      .then(response => response.json())
+      .then(data => {
+
+          document.title = data.head.title;
+
+
+          const navbarBrand = document.getElementById('navbarBrand');
+          const brand = data.body.navbar.brand;
+          navbarBrand.innerHTML = `
+              <a class="navbar-brand" href="${brand.href}">
+                  <img src="${brand.img_src}" alt="${brand.alt}" style="height: ${brand.height}">
+              </a>
+          `;
+
+          const navbarLinks = data.body.navbar.links;
+          const navbarLinksElement = document.getElementById('navbarLinks');
+          navbarLinksElement.innerHTML = ''; 
+
+          navbarLinks.forEach(link => {
+              const linkElement = document.createElement('li');
+              linkElement.classList.add('nav-item');
+              
+              const anchor = document.createElement('a');
+              anchor.classList.add('nav-link');
+
+              if (link.active) anchor.classList.add('active');
+              
+              anchor.href = link.href;
+              anchor.textContent = link.label;
+              
+              linkElement.appendChild(anchor);
+              navbarLinksElement.appendChild(linkElement);
+          });
+
+          const contentContainer = document.getElementById('contentContainer');
+          const content = data.body.content;
+          contentContainer.innerHTML = `
+              <h1 class="text-center mb-4">${content.header.h1}</h1>
+              ${content.sections.map(section => {
+                  if (section.title) {
+                      return `<h3>${section.title}</h3><p>${section.paragraph}</p>`;
+                  } else if (section.img) {
+                      return `<img src="${section.img.src}" alt="${section.img.alt}" class="${section.img.class}">`;
+                  } else {
+                      return `<p>${section.paragraph}</p>`;
+                  }
+              }).join('')}
+          `;
+
+          const footerContent = document.getElementById('footerContainer');
+          const footer = data.body.footer;
+          
+          footerContent.innerHTML = `
+              <p>${footer.content[0].text} 
+                  <img src="${footer.content[0].img_src}" alt="${footer.content[0].alt}" style="height: ${footer.content[0].height};">
+              </p>
+              <p>${footer.content[1].text}</p>
+          `;
+      })
+      .catch(error => {
+          console.error('Error loading JSON:', error);
+      });
+});

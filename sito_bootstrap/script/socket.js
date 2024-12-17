@@ -1,58 +1,97 @@
+document.addEventListener('DOMContentLoaded', function () {
+  // Impedisci la copia del testo
+  document.body.addEventListener('copy', (event) => {
+      event.preventDefault();
+      console.warn('Copia del testo non consentita!');
+  });
+  document.body.style.userSelect = 'none';
+  document.body.addEventListener('contextmenu', (event) => {
+      event.preventDefault();
+      console.warn('Clic destro disabilitato!');
+  });
+});
+
 fetch('../json/socket.json')
   .then(response => response.json())
   .then(data => {
-    // Navbar
-    const navbarLinks = data.navbar;
-    const navbar = document.querySelector('nav .navbar-nav');
-    navbar.innerHTML = `
-      <li class="nav-item"><a class="nav-link" href="../pages/index.html">${navbarLinks.home}</a></li>
-      <li class="nav-item"><a class="nav-link active" href="../pages/socket.html">${navbarLinks.socket}</a></li>
-      <li class="nav-item"><a class="nav-link" href="../pages/server_client.html">${navbarLinks.server_client}</a></li>
-      <li class="nav-item"><a class="nav-link" href="../pages/pila_iso_osi.html">${navbarLinks.pila_iso_osi}</a></li>
-      <li class="nav-item"><a class="nav-link" href="../pages/stack_tcp_ip.html">${navbarLinks.stack_tcp_ip}</a></li>
-      <li class="nav-item"><a class="nav-link" href="../pages/isoosi_vs_tcpip.html">${navbarLinks.isoosi_vs_tcpip}</a></li>
-      <li class="nav-item"><a class="nav-link" href="../pages/glossario.html">${navbarLinks.glossario}</a></li>
-    `;
-    
-    // Contenuto
-    const content = data.content;
-    const contentDiv = document.querySelector('.content .container');
-    contentDiv.innerHTML = `
-      <h1 class="text-center">${content.title}</h1>
-      <p class="giustificato">${content.description}</p>
+    const navbarLinks = document.getElementById('navbarLinks');
+    data.navbar.links.forEach(link => {
+      const listItem = document.createElement('li');
+      listItem.classList.add('nav-item');
+      
+      const anchor = document.createElement('a');
+      anchor.classList.add('nav-link');
+      anchor.href = link.href;
+      anchor.textContent = link.text;
+      if (link.active) {
+        anchor.classList.add('active');
+      }
+      
+      listItem.appendChild(anchor);
+      navbarLinks.appendChild(listItem);
+    });
 
-      <h3>${content.socket_types.title}</h3>
-      <p>Esistono due tipi principali di socket utilizzati per la comunicazione in rete:</p>
-      <ul class="giustificato">
-        ${content.socket_types.list.map(socket => `
-          <li><b>${socket.name}:</b> ${socket.description}</li>
-        `).join('')}
-      </ul>
+    const contentContainer = document.getElementById('contentContainer');
 
-      <img src="${content.image}" class="img-fluid mb-4" alt="Diagramma Client-Server Socket">
-      <p class="text-center">Schema di una comunicazione Client-Server tramite socket</p>
+    const title = document.createElement('h2');
+    title.textContent = data.content.title;
+    contentContainer.appendChild(title);
 
-      <h3>${content.process.title}</h3>
-      <ol class="giustificato">
-        ${content.process.steps.map(step => `
-          <li><b>${step.title}:</b> ${step.description}</li>
-        `).join('')}
-      </ol>
+    data.content.paragraphs.forEach(paragraph => {
+      const p = document.createElement('p');
+      p.classList.add('giustificato');
+      p.innerHTML = paragraph.text;
+      contentContainer.appendChild(p);
+    });
 
-      <h3>${content.examples.title}</h3>
-      <ul class="giustificato">
-        ${content.examples.list.map(example => `
-          <li><b>${example.name}:</b> ${example.description}</li>
-        `).join('')}
-      </ul>
-    `;
 
-    // Footer
-    const footer = data.content.footer;
-    const footerDiv = document.querySelector('footer');
-    footerDiv.innerHTML = `
-      <p>${footer.copyright} <img src="../images/logo.png" alt="WBSCHOOL Logo" style="height: 50px;"></p>
-      <p>${footer.author}</p>
+    data.content.sections.forEach(section => {
+      const sectionTitle = document.createElement('h3');
+      sectionTitle.textContent = section.title;
+      contentContainer.appendChild(sectionTitle);
+
+      if (section.paragraphs) {
+        section.paragraphs.forEach(paragraph => {
+          const p = document.createElement('p');
+          p.innerHTML = paragraph;
+          contentContainer.appendChild(p);
+        });
+      }
+
+      if (section.list) {
+        const ul = document.createElement('ul');
+        ul.classList.add('giustificato');
+        section.list.forEach(item => {
+          const li = document.createElement('li');
+          const b = document.createElement('b');
+          b.textContent = item.title;
+          li.appendChild(b);
+          const span = document.createElement('span');
+          span.innerHTML = item.text;
+          li.appendChild(span);
+          ul.appendChild(li);
+        });
+        contentContainer.appendChild(ul);
+      }
+    });
+
+    data.content.images.forEach(image => {
+      const img = document.createElement('img');
+      img.src = image.src;
+      img.alt = image.alt;
+      img.classList.add('img-fluid', 'mb-4');
+      contentContainer.appendChild(img);
+
+      const caption = document.createElement('p');
+      caption.classList.add('text-center');
+      caption.textContent = image.caption;
+      contentContainer.appendChild(caption);
+    });
+
+    const footer = document.getElementById('footer');
+    footer.innerHTML = `
+      <p>${data.footer.text} <img src="${data.footer.logo}" alt="WBSCHOOL Logo" style="height: 50px;"></p>
+      <p>${data.footer.author}</p>
     `;
   })
   .catch(error => {

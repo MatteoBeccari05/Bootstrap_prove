@@ -1,5 +1,18 @@
-document.addEventListener('DOMContentLoaded', () => {
-    fetch('../json/index.json')  // Percorso del file JSON
+document.addEventListener('DOMContentLoaded', function () {
+    // Impedisci la copia del testo
+    document.body.addEventListener('copy', (event) => {
+        event.preventDefault();
+        console.warn('Copia del testo non consentita!');
+    });
+    document.body.style.userSelect = 'none';
+    document.body.addEventListener('contextmenu', (event) => {
+        event.preventDefault();
+        console.warn('Clic destro disabilitato!');
+    });
+});
+
+
+fetch('../json/index.json')  // Percorso del file JSON
         .then(response => response.json())
         .then(data => {
             // titolo della pagina
@@ -85,4 +98,3 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('footer-author').textContent = data.footer.author;
         })
         .catch(error => console.error('Error loading JSON:', error));
-});

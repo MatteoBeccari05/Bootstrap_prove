@@ -12,16 +12,21 @@
         <div id="timer">60:00</div>
     </header>
     
-    <div id="buttons">
+    <!-- Bottone per le domande -->
+    <div id="buttons-questions">
         <button onclick="window.location.href='domanda1.html'">Domanda 1</button>
         <button onclick="window.location.href='domanda2.html'">Domanda 2</button>
         <button onclick="window.location.href='domanda3.html'">Domanda 3</button>
         <button onclick="window.location.href='quiz1.html'">Quiz 1</button>
         <button onclick="window.location.href='quiz2.html'">Quiz 2</button>
-        <!-- Pulsante per consegnare, con un evento onClick -->
-        <button onclick="consegna()">Consegna</button>
     </div>
     
+    <!-- Bottone per Consegna e Reset -->
+    <div id="buttons-actions">
+        <button onclick="consegna()" class="consegna">Consegna</button>
+        <button id="resetButton" class="reset">Reset</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 // Funzione per salvare la risposta nel localStorage
 function saveAnswer(questionId, answer) {
     localStorage.setItem(questionId, answer);
@@ -32,65 +31,118 @@ function startTimer() {
 
 // Avvia il timer se non è già partito
 window.onload = function() {
-    // Avvia il timer se non è già partito
     if (timeLeft > 0) {
         startTimer();
     }
 
-    // Identifica la domanda corrente basata sull'ID della pagina
     const questionId = document.body.id; // Usa l'ID del body per determinare quale domanda è caricata
 
-    // Carica la risposta salvata per la domanda corrente, se esiste
+    // Carica la risposta salvata nel localStorage
     const savedAnswer = loadAnswer(questionId);
-
-    // Se la domanda è stata caricata correttamente e la risposta esiste, la carica nella textarea
     if (savedAnswer && document.getElementById(`textarea-${questionId}`)) {
         document.getElementById(`textarea-${questionId}`).value = savedAnswer;
     }
 
-    // Ascolta l'input per salvare automaticamente la risposta
+    // Salva la risposta mentre l'utente digita nel textarea
     if (document.getElementById(`textarea-${questionId}`)) {
         document.getElementById(`textarea-${questionId}`).addEventListener('input', function() {
-            saveAnswer(questionId, this.value); // Salva la risposta nel localStorage ogni volta che l'utente scrive
+            saveAnswer(questionId, this.value); // Salva la risposta nel localStorage
         });
     }
 
-    const savedAnswers = {
-        q11: localStorage.getItem('q11') || '',
-        q21: localStorage.getItem('q21') || '',
-        q31: localStorage.getItem('q31') || '',
-        q41: localStorage.getItem('q41') || '',
-        q51: localStorage.getItem('q51') || '',
-        q12: localStorage.getItem('q12') || '',
-        q22: localStorage.getItem('q22') || '',
-        q32: localStorage.getItem('q32') || '',
-        q42: localStorage.getItem('q42') || '',
-        q52: localStorage.getItem('q52') || '',
-    };
-
-    // Se ci sono risposte salvate, le seleziona
+    // Gestisce il salvataggio delle risposte per le domande a scelta multipla
     const form = document.getElementById('quizForm');
     form.addEventListener('change', function(event) {
         if (event.target.type === 'radio') {
-            const question = event.target.name; // 'q1', 'q2', etc.
+            const question = event.target.name;
             const answer = event.target.value;
             localStorage.setItem(question, answer); // Salva la risposta selezionata nel localStorage
         }
     });
-
-    // Seleziona le risposte precedentemente salvate
-    for (let question in savedAnswers) {
-        const selectedValue = savedAnswers[question];
-        if (selectedValue) {
-            const radioButton = document.querySelector(`input[name="${question}"][value="${selectedValue}"]`);
-            if (radioButton) {
-                radioButton.checked = true; // Seleziona la risposta salvata
-            }
-        }
-    }
-
 };
 
+// Funzione che raccoglie tutte le risposte dalle domande
+function generaFileRisposte() {
+    let risposte = '';
 
+    // Definisci tutte le domande che vuoi raccogliere
+    const domande = [
+        { id: 'textarea-question1', label: '1. Cos\'è un algoritmo in informatica?' },
+        { id: 'textarea-question2', label: '2. Cos\'è la "memoria RAM" in un computer?' },
+        { id: 'textarea-question3', label: '3. Cos\'è il "cloud computing"?' },
+        { label: 'QUIZ 1' },
+        { id: 'q11', label: 'Cosa significa "informatica"?' },
+        { id: 'q21', label: 'Quali sono alcuni dei principali settori dell\'informatica?' },
+        { id: 'q31', label: 'Qual è l\'obiettivo principale dell\'informatica?' },
+        { id: 'q41', label: 'In quale ambito l\'informatica ha influenzato maggiormente la vita quotidiana?' },
+        { id: 'q51', label: 'Cosa combina il termine "informatica"?' },
+        { label: 'QUIZ 2' },
+        { id: 'q12', label: 'Cosa rappresenta una socket in informatica?' },
+        { id: 'q22', label: 'Qual è il principale protocollo utilizzato dalle socket per garantire una comunicazione affidabile?' },
+        { id: 'q32', label: 'Cosa identifica una socket su una rete?' },
+        { id: 'q42', label: 'In quale situazione un server crea una socket?' },
+        { id: 'q52', label: 'Qual è la differenza principale tra TCP e UDP nelle socket?' },
+    ];
 
+    // Raccogli le risposte per ogni domanda
+    domande.forEach((domanda) => {
+        let risposta = '';
+        
+        // Controllo per le risposte a scelta multipla (radio button)
+        const selectedOption = document.querySelector(`input[name="${domanda.id}"]:checked`);
+        if (selectedOption) {
+            risposta = selectedOption.parentElement.textContent.trim();
+        }
+        // Controllo per le risposte testuali (textarea)
+        else {
+            const textarea = document.querySelector(`#${domanda.id}`);
+            if (textarea) {
+                risposta = textarea.value.trim();
+            } else {
+                risposta = 'Nessuna risposta';
+            }
+        }
+        
+        risposte += `${domanda.label}\nRisposta: ${risposta}\n\n`;
+    });
+
+    // Crea un Blob con le risposte
+    const blob = new Blob([risposte], { type: 'text/plain' });
+
+    // Crea un link per il download del file
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'risposte_verifica.txt';
+    link.click();
+}
+
+// Funzione per resettare il quiz
+function resetQuiz() {
+    // Ripristina il timer
+    timeLeft = 60 * 60; // 1 ora
+    localStorage.setItem('timeLeft', timeLeft);
+    timerDisplay.innerHTML = "60:00"; // Imposta il timer a 1 ora
+    startTimer(); // Avvia di nuovo il timer
+
+    // Cancella le risposte dal localStorage
+    localStorage.clear();
+
+    // Ripristina tutte le risposte nel form
+    const formElements = document.querySelectorAll('input[type="radio"], textarea');
+    formElements.forEach(el => {
+        if (el.type === 'radio') {
+            el.checked = false;
+        } else if (el.tagName === 'TEXTAREA') {
+            el.value = '';
+        }
+    });
+}
+
+// Aggiungi l'evento per il tasto "Consegna"
+function consegna() {
+    generaFileRisposte();
+}
+
+// Aggiungi l'evento per il tasto "Reset"
+document.getElementById('resetButton').addEventListener('click', resetQuiz);
 

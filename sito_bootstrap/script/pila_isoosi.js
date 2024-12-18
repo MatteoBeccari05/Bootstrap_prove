@@ -18,22 +18,22 @@ document.addEventListener('DOMContentLoaded', () => {
             // titolo della pagina
             document.title = data.title;
 
-            // navbar
+            // Navbar
             const navbar = document.querySelector('nav');
             navbar.innerHTML = `
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="${data.navbar.brand.href}">
-                            <img src="${data.navbar.brand.logo}" alt="${data.navbar.brand.alt}" style="height: ${data.navbar.brand.height};">
+                            <img src="${data.navbar.brand.img.src}" alt="${data.navbar.brand.img.alt}" style="height: ${data.navbar.brand.img.height};">
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
                             <ul class="navbar-nav">
-                                ${data.navbar.items.map(item => `
+                                ${data.navbar.menu.map(item => `
                                     <li class="nav-item">
-                                        <a class="nav-link ${item.active ? 'active' : ''}" href="${item.href}">${item.text}</a>
+                                        <a class="nav-link ${item.active ? 'active' : ''}" href="${item.href}">${item.name}</a>
                                     </li>
                                 `).join('')}
                             </ul>
@@ -42,28 +42,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 </nav>
             `;
 
-            // contenuto principale
+            // Contenuto principale
             const contentDiv = document.querySelector('.content');
             contentDiv.innerHTML = `
                 <div class="container mt-5">
                     <h1 class="text-center mb-4">${data.content.header.title}</h1>
-                    <p class="giustificato">${data.content.header.description}</p>
-                    <h3>I 7 Livelli della Pila ISO/OSI</h3>
-                    <p class="giustificato">La pila ISO/OSI è composta da sette livelli, che vanno dal livello fisico al livello applicativo. Ecco una panoramica di ciascun livello:</p>
+                    <p class="giustificato">${data.content.header.subheading}</p>
+                    <h3>${data.content.levels.title}</h3>
+                    <p class="giustificato">${data.content.levels.description}</p>
                     <ul class="giustificato">
-                        ${data.content.levels.map(level => `
-                            <li><strong>${level.title}</strong> - ${level.description}${level.link ? ` <a href="${level.link}" target="_blank">${level.example ? 'Leggi di più' : 'Ulteriori informazioni'}</a>` : ''}${level.example ? ` Esempi: ${level.example}` : ''}</li>
+                        ${data.content.levels.list.map(level => `
+                            <li>
+                                <strong>Livello ${level.level}: ${level.name}</strong> - ${level.description}
+                                ${level.links ? level.links.map(link => ` <a href="${link.href}" target="_blank">${link.text}</a>`).join('') : ''}
+                            </li>
                         `).join('')}
                     </ul>
                     <img src="${data.content.image.src}" class="img-fluid" alt="${data.content.image.alt}">
-                    <p class="text-center">Schema del modello ISO/OSI</p>
+                    <p class="text-center">${data.content.image.caption}</p>
                 </div>
             `;
 
-            // footer
+            // Footer
             const footer = document.querySelector('footer');
             footer.innerHTML = `
-                <p>${data.footer.text} <img src="${data.footer.logo}" alt="WBSCHOOL Logo" style="height: 50px;"></p>
+                <p>${data.footer.text} <img src="${data.footer.image.src}" alt="${data.footer.image.alt}" style="height: ${data.footer.image.height};"></p>
                 <p>${data.footer.author}</p>
             `;
         })

@@ -35,74 +35,79 @@ window.onload = function() {
         startTimer();
     }
 
-    const questionId = document.body.id; // Usa l'ID del body per determinare quale domanda è caricata
-
-    // Carica la risposta salvata nel localStorage
-    const savedAnswer = loadAnswer(questionId);
-    if (savedAnswer && document.getElementById(`textarea-${questionId}`)) {
-        document.getElementById(`textarea-${questionId}`).value = savedAnswer;
-    }
-
-    // Salva la risposta mentre l'utente digita nel textarea
-    if (document.getElementById(`textarea-${questionId}`)) {
-        document.getElementById(`textarea-${questionId}`).addEventListener('input', function() {
-            saveAnswer(questionId, this.value); // Salva la risposta nel localStorage
-        });
-    }
-
-    // Gestisce il salvataggio delle risposte per le domande a scelta multipla
-    const form = document.getElementById('quizForm');
-    form.addEventListener('change', function(event) {
-        if (event.target.type === 'radio') {
-            const question = event.target.name;
-            const answer = event.target.value;
-            localStorage.setItem(question, answer); // Salva la risposta selezionata nel localStorage
+    // Carica le risposte salvate nel localStorage per le domande testuali (textarea)
+    const textareas = document.querySelectorAll('textarea');
+    textareas.forEach((textarea) => {
+        const savedAnswer = loadAnswer(textarea.id);
+        if (savedAnswer) {
+            textarea.value = savedAnswer;
         }
+
+        // Salva la risposta nel localStorage mentre l'utente digita
+        textarea.addEventListener('input', function() {
+            saveAnswer(textarea.id, this.value); // Salva la risposta nel localStorage
+        });
+    });
+
+    // Carica le risposte delle domande a scelta multipla (radio buttons)
+    const radioButtons = document.querySelectorAll('input[type="radio"]');
+    radioButtons.forEach((radio) => {
+        // Carica la risposta salvata, se presente
+        if (loadAnswer(radio.name) === radio.value) {
+            radio.checked = true;
+        }
+
+        radio.addEventListener('change', function() {
+            saveAnswer(this.name, this.value); // Salva la risposta nel localStorage
+        });
     });
 };
 
-// Funzione che raccoglie tutte le risposte dalle domande
+// Funzione per raccogliere tutte le risposte dal localStorage e generare il file
 function generaFileRisposte() {
     let risposte = '';
 
     // Definisci tutte le domande che vuoi raccogliere
     const domande = [
-        { id: 'textarea-question1', label: '1. Cos\'è un algoritmo in informatica?' },
-        { id: 'textarea-question2', label: '2. Cos\'è la "memoria RAM" in un computer?' },
-        { id: 'textarea-question3', label: '3. Cos\'è il "cloud computing"?' },
-        { label: 'QUIZ 1' },
-        { id: 'q11', label: 'Cosa significa "informatica"?' },
-        { id: 'q21', label: 'Quali sono alcuni dei principali settori dell\'informatica?' },
-        { id: 'q31', label: 'Qual è l\'obiettivo principale dell\'informatica?' },
-        { id: 'q41', label: 'In quale ambito l\'informatica ha influenzato maggiormente la vita quotidiana?' },
-        { id: 'q51', label: 'Cosa combina il termine "informatica"?' },
-        { label: 'QUIZ 2' },
-        { id: 'q12', label: 'Cosa rappresenta una socket in informatica?' },
-        { id: 'q22', label: 'Qual è il principale protocollo utilizzato dalle socket per garantire una comunicazione affidabile?' },
-        { id: 'q32', label: 'Cosa identifica una socket su una rete?' },
-        { id: 'q42', label: 'In quale situazione un server crea una socket?' },
-        { id: 'q52', label: 'Qual è la differenza principale tra TCP e UDP nelle socket?' },
+        { id: 'textarea-question1', label: 'Cos\'è un algoritmo in informatica?' },
+        { id: 'textarea-question2', label: 'Cos\'è la "memoria RAM" in un computer?' },
+        { id: 'textarea-question3', label: 'Cos\'è il "cloud computing"?' }
     ];
 
     // Raccogli le risposte per ogni domanda
     domande.forEach((domanda) => {
-        let risposta = '';
-        
-        // Controllo per le risposte a scelta multipla (radio button)
-        const selectedOption = document.querySelector(`input[name="${domanda.id}"]:checked`);
-        if (selectedOption) {
-            risposta = selectedOption.parentElement.textContent.trim();
+        let risposta = loadAnswer(domanda.id).trim();
+        if (!risposta) {
+            risposta = 'Nessuna risposta';
         }
-        // Controllo per le risposte testuali (textarea)
-        else {
-            const textarea = document.querySelector(`#${domanda.id}`);
-            if (textarea) {
-                risposta = textarea.value.trim();
-            } else {
-                risposta = 'Nessuna risposta';
-            }
-        }
-        
+        risposte += `${domanda.label}\nRisposta: ${risposta}\n\n`; // Aggiungi la risposta al testo
+    });
+
+    // Aggiungi le risposte delle domande del quiz1
+    const quiz1Domande = [
+        { name: 'q11', label: '1. Cosa significa "informatica"?' },
+        { name: 'q21', label: '2. Quali sono alcuni dei principali settori dell\'informatica?' },
+        { name: 'q31', label: '3. Qual è l\'obiettivo principale dell\'informatica?' },
+        { name: 'q41', label: '4. In quale ambito l\'informatica ha influenzato maggiormente la vita quotidiana?' },
+        { name: 'q51', label: '5. Cosa combina il termine "informatica"?' }
+    ];
+
+    quiz1Domande.forEach((domanda) => {
+        const risposta = loadAnswer(domanda.name) || 'Nessuna risposta';
+        risposte += `${domanda.label}\nRisposta: ${risposta}\n\n`;
+    });
+
+    // Aggiungi le risposte delle domande del quiz2
+    const quiz2Domande = [
+        { name: 'q12', label: '1. Cosa rappresenta una socket in informatica?' },
+        { name: 'q22', label: '2. Qual è il principale protocollo utilizzato dalle socket per garantire una comunicazione affidabile?' },
+        { name: 'q32', label: '3. Cosa identifica una socket su una rete?' },
+        { name: 'q42', label: '4. In quale situazione un server crea una socket?' },
+        { name: 'q52', label: '5. Qual è la differenza principale tra TCP e UDP nelle socket?' }
+    ];
+
+    quiz2Domande.forEach((domanda) => {
+        const risposta = loadAnswer(domanda.name) || 'Nessuna risposta';
         risposte += `${domanda.label}\nRisposta: ${risposta}\n\n`;
     });
 
@@ -112,9 +117,16 @@ function generaFileRisposte() {
     // Crea un link per il download del file
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
-    link.download = 'risposte_verifica.txt';
+    link.download = 'risposte_verifica.txt'; // Nome del file di testo da scaricare
+
+    // Clicca automaticamente sul link per scaricare il file
     link.click();
 }
+
+// Aggiungi l'evento per il tasto "Consegna"
+document.getElementById('submitButton').addEventListener('click', function() {
+    generaFileRisposte(); // Genera e scarica il file delle risposte
+});
 
 // Funzione per resettare il quiz
 function resetQuiz() {
@@ -128,21 +140,15 @@ function resetQuiz() {
     localStorage.clear();
 
     // Ripristina tutte le risposte nel form
-    const formElements = document.querySelectorAll('input[type="radio"], textarea');
+    const formElements = document.querySelectorAll('textarea, input[type="radio"]');
     formElements.forEach(el => {
-        if (el.type === 'radio') {
-            el.checked = false;
-        } else if (el.tagName === 'TEXTAREA') {
+        if (el.tagName === 'TEXTAREA') {
             el.value = '';
+        } else if (el.type === 'radio') {
+            el.checked = false;
         }
     });
 }
 
-// Aggiungi l'evento per il tasto "Consegna"
-function consegna() {
-    generaFileRisposte();
-}
-
 // Aggiungi l'evento per il tasto "Reset"
 document.getElementById('resetButton').addEventListener('click', resetQuiz);
-

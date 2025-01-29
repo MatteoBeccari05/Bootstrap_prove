@@ -1,0 +1,91 @@
+[
+    {
+        "id": 1,
+        "name": "Iphone 15 Pro",
+        "images": {
+            "bianco": "../images/iphone15pro_white.jpg",
+            "nero": "../images/iphone15pro_black.jpg"
+        },
+        "colors": ["Bianco", "Nero"],
+        "processor": "A17 Pro",
+        "display": "OLED da 6,1\"",
+        "storage": "512GB",
+        "price": "€1.199",
+        "description": "L'Iphone 15 Pro è dotato di un display OLED da 6,1 pollici, processore A17 Pro e 512GB di memoria interna."
+    },
+    {
+        "id": 2,
+        "name": "Iphone 16",
+        "images": {
+            "bianco": "../images/iphone16_white.jpg",
+            "blu": "../images/iphone16_blu.jpg",
+            "verde": "../images/iphone16_green.jpg",
+            "viola": "../images/iphone16_viola.jpg"
+        },
+        "colors": ["Bianco", "Blu", "Verde", "Viola"],
+        "processor": "A18",
+        "display": "OLED da 6,1\"",
+        "storage": "256GB",
+        "price": "€979",
+        "description": "L'Iphone 16 presenta un potente chip A18, uno schermo OLED da 6,1 pollici e 256GB di memoria."
+    },
+    {
+        "id": 3,
+        "name": "Iphone 15 Plus",
+        "images": {
+            "bianco": "../images/iphone15plus_white.jpg",
+            "nero": "../images/iphone15plus_black.jpg",
+            "verde": "../images/iphone15plus_green.jpg",
+            "giallo": "../images/iphone15plus_yellow.jpg"
+        },
+        "colors": ["Bianco", "Nero", "Verde", "Giallo"],
+        "processor": "A17",
+        "display": "OLED da 6,7\"",
+        "storage": "256GB",
+        "price": "€869",
+        "description": "L'Iphone 15 Plus ha un display OLED da 6,7 pollici, processore A17 e 256GB di memoria."
+    },
+    {
+        "id": 4,
+        "name": "Iphone 13 Pro",
+        "images": {
+            "azzurro": "../images/iphone13pro_blue.jpg",
+            "nero": "../images/iphone13pro_black.jpg"
+        },
+        "colors": ["Azzurro", "Nero"],
+        "processor": "A15 Bionic",
+        "display": "OLED da 6,1\"",
+        "storage": "128GB",
+        "price": "€699",
+        "description": "L'Iphone 13 Pro è dotato di un potente processore A15 Bionic, display OLED da 6,1\" e 128GB di memoria."
+    },
+    {
+        "id": 5,
+        "name": "Iphone 14 Pro",
+        "images": {
+            "nero": "../images/iphone14pro_black.jpg",
+            "oro": "../images/iphone14pro_oro.jpg",
+            "viola": "../images/iphone14pro_viola.jpg"
+        },
+        "colors": ["Nero", "Oro", "Viola"],
+        "processor": "A16 Bionic",
+        "display": "OLED da 6,1\"",
+        "storage": "512GB",
+        "price": "€999",
+        "description": "L'Iphone 14 Pro è dotato di un display OLED da 6,1 pollici, processore A16 Bionic e 512GB di memoria."
+    },
+    {
+        "id": 6,
+        "name": "Iphone 14",
+        "images": {
+            "nero": "../images/iphone14_black.jpg",
+            "giallo": "../images/iphone14_yellow.jpg"
+        },
+        "colors": ["Nero", "Giallo"],
+        "processor": "A17",
+        "display": "OLED da 6,1\"",
+        "storage": "128GB",
+        "price": "€729",
+        "description": "L'Iphone 14 è dotato di un display OLED da 6,1 pollici, processore A17 e 128GB di memoria."
+    }
+]

@@ -1,7 +1,7 @@
 /* Stile per centrare il titolo */
 h1 {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 70px;
     color: #000000;
     font-family: 'Arial', sans-serif;
 }
@@ -53,5 +53,27 @@ body {
     font-weight: bold;
     color: #28a745; /* Verde per indicare il prezzo */
 }
+
+.esaurito {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ec3131; /* Verde per indicare il prezzo */
+}
+
+/* Impostazioni di layout per assicurarsi che il footer stia sempre in fondo */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto; /* Spinge il footer verso il basso */
+}
+
 
 

@@ -10,7 +10,7 @@
 </head>
 <body>
     
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">UT Device</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,13 +22,10 @@
                         <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Catalogo</a>
+                        <a class="nav-link" href="catalogo.html">Catalogo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Carrello</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="prodotto.html">Prodotto</a>
                     </li>
                 </ul>
             </div>
@@ -43,72 +40,73 @@
 
     <div class="card-deck">
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="../images/iphone15pro.jpg" alt="Card image cap">
+            <img class="card-img-top" src="../images/iphone15pro_black.jpg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Iphone 15 Pro</h5>
                 <p class="card-text">Processore A17 Pro <br> Display OLED da 6,1" <br> 512GB </p>
                 <div class="d-flex justify-content-between align-items-center">
-                    <a href="prodotto.html" class="btn btn-primary">Scopri di più</a>
+                    <a href="prodotto.html?id=1" class="btn btn-primary">Scopri di più</a>
+
                     <span class="price">€1.199</span>
                 </div>
             </div>
         </div>
     
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="../images/iphone16.jpg" alt="Card image cap">
+            <img class="card-img-top" src="../images/iphone16_viola.jpg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Iphone 16</h5>
                 <p class="card-text">Processore A18 <br> Display OLED da 6,1" <br> 256GB </p>
                 <div class="d-flex justify-content-between align-items-center">
-                    <a href="prodotto.html" class="btn btn-primary">Scopri di più</a>
+                    <a href="prodotto.html?id=2" class="btn btn-primary">Scopri di più</a>
                     <span class="price">€979</span>
                 </div>
             </div>
         </div>
     
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="../images/iphone15plus.jpg" alt="Card image cap">
+            <img class="card-img-top" src="../images/iphone15plus_green.jpg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Iphone 15 Plus</h5>
                 <p class="card-text">Processore A17 <br> Display OLED da 6,7" <br> 256GB </p>
                 <div class="d-flex justify-content-between align-items-center">
-                    <a href="prodotto.html" class="btn btn-primary">Scopri di più</a>
+                    <a href="prodotto.html?id=3" class="btn btn-primary">Scopri di più</a>
                     <span class="price">€869</span>
                 </div>
             </div>
         </div>
     
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="../images/iphone13pro.jpeg" alt="Card image cap">
+            <img class="card-img-top" src="../images/iphone13pro_black.jpg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Iphone 13 Pro</h5>
                 <p class="card-text">Processore A15 Bionic<br> Display OLED da 6,1" <br> 128GB </p>
                 <div class="d-flex justify-content-between align-items-center">
-                    <a href="prodotto.html" class="btn btn-primary">Scopri di più</a>
+                    <a href="prodotto.html?id=4" class="btn btn-primary">Scopri di più</a>
                     <span class="price">€699</span>
                 </div>
             </div>
         </div>
     
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="../images/iphone14pro.jpg" alt="Card image cap">
+            <img class="card-img-top" src="../images/iphone14pro_black.jpg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Iphone 14 Pro</h5>
                 <p class="card-text">Processore A16 Bionic<br> Display OLED da 6,1" <br> 512GB </p>
                 <div class="d-flex justify-content-between align-items-center">
-                    <a href="prodotto.html" class="btn btn-primary">Scopri di più</a>
+                    <a href="prodotto.html?id=5" class="btn btn-primary">Scopri di più</a>
                     <span class="price">€999</span>
                 </div>
             </div>
         </div>
     
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="../images/iphone14.jpg" alt="Card image cap">
+            <img class="card-img-top" src="../images/iphone14_black.jpg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Iphone 14</h5>
                 <p class="card-text">Processore A17 <br> Display OLED da 6,1" <br> 128GB </p>
                 <div class="d-flex justify-content-between align-items-center">
-                    <a href="prodotto.html" class="btn btn-primary">Scopri di più</a>
+                    <a href="prodotto.html?id=6" class="btn btn-primary">Scopri di più</a>
                     <span class="price">€729</span>
                 </div>
             </div>
@@ -117,19 +115,8 @@
 
 
 
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top bg-dark text-light">
-        <div class="col-md-4 d-flex align-items-center">
-            <a href="/" class="mb-3 me-2 mb-md-0 text-light text-decoration-none lh-1">
-                <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-            </a>
-            <span class="mb-3 mb-md-0 text-light">© 2024 UT Device</span>
-        </div>
-    
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-light" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-            <li class="ms-3"><a class="text-light" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-            <li class="ms-3"><a class="text-light" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-        </ul>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 UT Device  </p>
     </footer>
     
     

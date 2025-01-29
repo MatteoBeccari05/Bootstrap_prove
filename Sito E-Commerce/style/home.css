@@ -77,3 +77,41 @@ footer {
 
 
 
+/* Stile per il prezzo in grande e colorato di verde */
+.product-price-container {
+    margin-top: 20px;
+    text-align: center; /* Centra il prezzo */
+}
+
+.product-price {
+    font-size: 2.5rem; /* Prezzo grande */
+    color: #28a745; /* Verde */
+    font-weight: bold; /* Rende il prezzo in grassetto */
+}
+
+/* Stili per il pulsante Aggiungi al carrello */
+#add-to-cart-btn {
+    background-color: #28a745;
+    color: white;
+    font-size: 1.25rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Cambio colore al passaggio del mouse */
+#add-to-cart-btn:hover {
+    background-color: #218838;
+}
+
+/* Padding extra per il bottone */
+#add-to-cart-btn:focus {
+    outline: none;
+}
+
+
+
+

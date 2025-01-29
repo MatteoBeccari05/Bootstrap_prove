@@ -13,31 +13,39 @@ async function loadProductDetails() {
     if (product) {
         // Aggiungi i dettagli del prodotto alla pagina
         const productDetailsHTML = `
-            <div class="row">
-                <!-- Colonna per l'immagine del prodotto -->
-                <div class="col-md-6">
-                    <img id="product-image" src="${product.images[product.colors[0].toLowerCase()]}" alt="${product.name}" class="img-fluid rounded">
-                </div>
-                <!-- Colonna per le specifiche e descrizioni -->
-                <div class="col-md-6">
-                    <h2>${product.name}</h2>
-                    <p><strong>Processore:</strong> ${product.processor}</p>
-                    <p><strong>Display:</strong> ${product.display}</p>
-                    <p><strong>Memoria:</strong> ${product.storage}</p>
-                    <p><strong>Prezzo:</strong> ${product.price}</p>
-                    <p><strong>Descrizione:</strong> ${product.description}</p>
-                    
-                    <!-- Selezione del colore -->
-                    <div class="form-group">
-                        <label for="color-select">Scegli il colore:</label>
-                        <select id="color-select" class="form-select">
-                            ${product.colors.map(color => `<option value="${color.toLowerCase()}">${color}</option>`).join('')}
-                        </select>
-                    </div>
-                </div>
+        <div class="row">
+            <!-- Colonna per l'immagine del prodotto -->
+            <div class="col-md-6">
+                <img id="product-image" src="${product.images[product.colors[0].toLowerCase()]}" alt="${product.name}" class="img-fluid rounded product-image">
             </div>
-        `;
-        document.getElementById('product-details').innerHTML = productDetailsHTML;
+            <!-- Colonna per le specifiche e descrizioni -->
+            <div class="col-md-6">
+                <h2 class="product-title">${product.name}</h2>
+                <p><strong>Processore:</strong> ${product.processor}</p>
+                <p><strong>Display:</strong> ${product.display}</p>
+                <p><strong>Memoria:</strong> ${product.storage}</p>
+                <p class="product-description"><strong>Descrizione:</strong> ${product.description}</p>
+                
+                <!-- Selezione del colore -->
+                <div class="form-group">
+                    <label for="color-select">Scegli il colore:</label>
+                    <select id="color-select" class="form-select color-select">
+                        ${product.colors.map(color => `<option value="${color.toLowerCase()}">${color}</option>`).join('')}
+                    </select>
+                </div>
+    
+                <!-- Prezzo in grande e verde -->
+                <div class="product-price-container">
+                    <p class="product-price">${product.price}</p>
+                </div>
+    
+                <!-- Aggiungi al carrello -->
+                <button class="btn btn-success mt-4" id="add-to-cart-btn">Aggiungi al carrello</button>
+            </div>
+        </div>
+    `;
+    
+    document.getElementById('product-details').innerHTML = productDetailsHTML;
 
         // Aggiungere l'evento per cambiare l'immagine
         const colorSelect = document.getElementById('color-select');
@@ -59,3 +67,6 @@ async function loadProductDetails() {
 
 // Carica i dettagli del prodotto quando la pagina viene caricata
 window.addEventListener('load', loadProductDetails);
+
+
+

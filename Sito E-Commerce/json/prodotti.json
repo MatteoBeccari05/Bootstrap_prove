@@ -314,6 +314,141 @@
         "storage": "512GB",
         "price": "€1.199",
         "description": "L'iPad Pro è un dispositivo straordinario con chip M2 e display Liquid Retina XDR da 12,9\", perfetto per professionisti che cercano potenza e precisione nei dettagli."
+    },
+    {
+        "id": 30,
+        "name": "Galaxy A04s",
+        "images": {
+          "bianco": "../images/a04s_white.jpg"
+        },
+        "colors": ["Bianco"],
+        "processor": "Exynos 850",
+        "display": "PLS LCD da 6,5\"",
+        "storage": "64GB",
+        "price": "€149",
+        "description": "Il Galaxy A04s offre un display PLS LCD da 6,5\" e un processore Exynos 850, perfetto per un uso quotidiano."
+    },
+    {
+        "id": 31,
+        "name": "Galaxy A14",
+        "images": {
+          "nero": "../images/a14_black.jpg"
+        },
+        "colors": ["Nero"],
+        "processor": "Exynos 850",
+        "display": "PLS LCD da 6,6\"",
+        "storage": "64GB",
+        "price": "€199",
+        "description": "Galaxy A14 con display PLS LCD da 6,6\" e processore Exynos 850 è ideale per chi cerca un buon rapporto qualità-prezzo."
+    },
+    {
+        "id": 32,
+        "name": "Galaxy A24",
+        "images": {
+          "nero": "../images/a24_black.jpg"
+        },
+        "colors": ["Nero"],
+        "processor": "MediaTek Helio G99",
+        "display": "Super AMOLED da 6,5\"",
+        "storage": "128GB",
+        "price": "€279",
+        "description": "Galaxy A24 offre un display Super AMOLED da 6,5\" con il potente processore MediaTek Helio G99, per prestazioni elevate."
+    },
+    {
+        "id": 33,
+        "name": "Galaxy A34",
+        "images": {
+          "viola": "../images/a34.jpg"
+        },
+        "colors": ["Viola"],
+        "processor": "MediaTek Dimensity 1080",
+        "display": "Super AMOLED da 6,6\"",
+        "storage": "128GB",
+        "price": "€349",
+        "description": "Galaxy A34 con il processore MediaTek Dimensity 1080 e un display Super AMOLED da 6,6\" è perfetto per chi cerca prestazioni elevate e una qualità visiva eccezionale."
+    },
+    {
+        "id": 34,
+        "name": "Galaxy A54",
+        "images": {
+          "nero": "../images/a54_black.jpg"
+        },
+        "colors": ["Nero"],
+        "processor": "Exynos 1380",
+        "display": "Super AMOLED da 6,4\"",
+        "storage": "256GB",
+        "price": "€499",
+        "description": "Galaxy A54 offre prestazioni elevate grazie al processore Exynos 1380 e un display Super AMOLED da 6,4\" per una qualità visiva straordinaria."
+    },
+    {
+        "id": 35,
+        "name": "Galaxy A73",
+        "images": {
+          "nero": "../images/a73_black.jpg"
+        },
+        "colors": ["Nero"],
+        "processor": "Qualcomm Snapdragon 778G",
+        "display": "Super AMOLED Plus da 6,7\"",
+        "storage": "256GB",
+        "price": "€579",
+        "description": "Il Galaxy A73 è dotato di un display Super AMOLED Plus da 6,7\" e un processore Qualcomm Snapdragon 778G, per prestazioni premium."
+    },
+    {
+        "id": 40,
+        "name": "Apple Watch Series 10",
+        "images": {
+            "nero": "../images/applewatch10_black.jpg",
+            "oro": "../images/applewatch10_white.jpg",
+            "blu": "../images/applewatch10_blue.jpg"
+        },
+        "colors": ["Nero", "Oro", "Blu"],
+        "processor": "Chip S10",
+        "display": "Always-On Retina",
+        "storage": "GPS + Cellular",
+        "price": "€599",
+        "description": "Apple Watch Series 10 con chip S10, display Always-On Retina e connettività GPS + Cellular."
+    },
+    {
+        "id": 41,
+        "name": "Apple Watch Series 9",
+        "images": {
+            "blu": "../images/applewatch9_blue.jpg",
+            "bianco": "../images/applewatch9_white.jpg"
+        },
+        "colors": ["Blu", "Bianco"],
+        "processor": "Chip S9",
+        "display": "Always-On Retina",
+        "storage": "GPS + Cellular",
+        "price": "€499",
+        "description": "Apple Watch Series 9 con chip S9, display Always-On Retina e connettività GPS + Cellular."
+    },
+    {
+        "id": 42,
+        "name": "Apple Watch Ultra",
+        "images": {
+            "nero": "../images/applewatchultra_black.jpg",
+            "bianco": "../images/applewatchultra_white.jpg"
+        },
+        "colors": ["Nero", "Bianco"],
+        "processor": "Chip S9",
+        "display": "Cassa in titanio 49mm",
+        "storage": "GPS + Cellular",
+        "price": "€899",
+        "description": "Apple Watch Ultra con chip S9, cassa in titanio 49mm e connettività GPS + Cellular."
+    },
+    {
+        "id": 43,
+        "name": "Apple Watch SE",
+        "images": {
+            "nero": "../images/applewatchse_black.jpg",
+            "bianco": "../images/applewatchse_white.jpg"
+        },
+        "colors": ["Nero", "Bianco"],
+        "processor": "Chip S8",
+        "display": "Retina",
+        "storage": "GPS",
+        "price": "€299",
+        "description": "Apple Watch SE con chip S8, display Retina e connettività GPS."
     }
     
 ]

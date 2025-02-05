@@ -1,16 +1,18 @@
 /* Stile per centrare il titolo */
 h1 {
     text-align: center;
-    margin-top: 70px;
+    margin-top: 90px;
     color: #000000;
     font-family: 'Arial', sans-serif;
+    font-weight: bold;
 }
 
 h2 {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 40px;
     color: #000000;
     font-family: 'Arial', sans-serif;
+    font-weight: bold;
 }
 
 /* Container per le cards */
@@ -73,6 +75,8 @@ body {
 
 footer {
     margin-top: auto; /* Spinge il footer verso il basso */
+    font-size: large;
+    font-weight: bold;
 }
 
 
@@ -113,5 +117,20 @@ footer {
 }
 
 
+nav
+{
+    font-size: large;
+    font-weight: bold;
+}
 
+.card h5
+{
+    font-weight: bold;
+}
+
+
+.card a
+{
+    font-weight: bold;
+}
 

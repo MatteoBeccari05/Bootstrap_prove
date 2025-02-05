@@ -449,6 +449,45 @@
         "storage": "GPS",
         "price": "€299",
         "description": "Apple Watch SE con chip S8, display Retina e connettività GPS."
+    },
+    {
+        "id": 44,
+        "name": "MacBook Air 13.3\"",
+        "images": {
+            "nero": "../images/macbookair_black.jpg"
+        },
+        "colors": ["Nero"],
+        "processor": "Chip M2",
+        "display": "Display Retina da 13,3\"",
+        "storage": "256GB SSD",
+        "price": "€1.099",
+        "description": "MacBook Air con chip M2, display Retina da 13,3\" e 256GB SSD."
+    },
+    {
+        "id": 45,
+        "name": "MacBook Pro 14\"",
+        "images": {
+            "grigio": "../images/macbook_pro.jpg"
+        },
+        "colors": ["Grigio"],
+        "processor": "Chip M2 Pro",
+        "display": "Display Liquid Retina XDR da 14\"",
+        "storage": "512GB SSD",
+        "price": "€2.099",
+        "description": "MacBook Pro con chip M2 Pro, display Liquid Retina XDR da 14\" e 512GB SSD."
+    },
+    {
+        "id": 46,
+        "name": "Mac Mini",
+        "images": {
+            "grigio": "../images/macmini.jpg"
+        },
+        "colors": ["Grigio"],
+        "processor": "Chip M2",
+        "display": "N/A",
+        "storage": "256GB SSD",
+        "price": "€799",
+        "description": "Mac Mini con chip M2, 8GB di RAM e 256GB SSD."
     }
     
 ]

@@ -51,9 +51,11 @@ body {
 }
 
 .price {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #28a745; /* Verde per indicare il prezzo */
+    margin-top: 15px;
+    margin-right: 20px;
 }
 
 .esaurito {
